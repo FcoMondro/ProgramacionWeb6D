@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<center><title>Listas y tablas</title></center>
+</head>
+<body>
+	<h1>Listas y tablas</h1>
+		
+		<p>Es importante entender que la buena organizacion del material contenido en una pagina web es un elemento muy importante para la “usabilidad: del propio sitio.<br>
+		Por ejemplo escribir una sola idea en un solo parrafo es muy importante para la claridad y comprension del usuario.
+		<br>
+		Listas y tablas son maneras de organizar el conocimiento de manera facil y organizada pata su facil entendimiento por parte del usuario del sitio.</p>
+		
+		<h3>Listas no ordenadas</h3>
+		<p>Lista no ordenada, cada uno de sus elementos deben ir dentro de un tag LI, sus atributos son TYPE=[disc, square circle]</p>
+		<p>Ejemplo: <br> <br>
+
+			<code>
+				< ul type=disc > <br>
+					< li >conejos blancos< /li > <br>
+					< li >conejos verdes< /li > <br>
+					< li >conejos rojos< /li > <br>
+				< /ul >
+		 	</code>
+			<br>
+			<br>
+			El resultado sería este:
+
+			<ul type=disc>
+				<li>conejos blancos</li>
+				<li>conejos verdes</li>
+				<li>conejos rojos</li>
+			</ul>
+		</p>
+	<h2>Listas</h2>
+	<h3>Listas ordenadas</h3>
+		<p> 
+			La etiqueta < ol > define una lista ordenada. Puede ser numerica o alfabeticamente. <br>
+			La etiqueta < il> define la lista de los elementos.
+
+			<table border="1" style="width:50%">
+				<tr>
+					<td>Atributo</td>
+					<td>Valor</td>
+					<td>Descripcion</td>
+				</tr>
+				<tr>
+					<td>compact</td>
+					<td>compact</td>
+					<td>Especifica que una lista deberia renderizarse mas chica de lo normal</td>
+				</tr>
+				<tr>
+					<td>reversed</td>
+					<td>reversed</td>
+					<td>Especifica que la lista va a ser descendiente (9,8,7...)</td>
+				</tr>
+				<tr>
+					<td>start</td>
+					<td>numerico</td>
+					<td>Especifica el valor de la lista ordenada</td>
+				</tr>
+				<tr>
+					<td>type</td>
+					<td>1, A, a, I, i</td>
+					<td>Especifica que tipo de marcador se usara en la lista</td>
+				</tr>
+			</table> <br>
+
+				<code>
+					< ol > <br>
+					  < li >Coffee< /li > <br>
+					  < li >Tea< /li > <br>
+					  < li >Milk< /li > <br>
+					< /ol > <br>		
+				<br>
+					< ol start="50" > <br>
+					  < li >Coffee< /li > <br>
+					  < li >Tea< /li > <br>
+					  < li >Milk< /li > <br>
+					< /ol > <br>
+				</code>
+				<br>
+				El resultado sería este: <br>	
+				<ol >
+				  <li>Coffee</li>
+				  <li>Tea</li>
+				  <li>Milk</li>
+				</ol>
+
+				<ol start="50">
+				  <li>Coffee</li>
+				  <li>Tea</li>
+				  <li>Milk</li>
+				</ol>
+		</p>
+	<h3>Listas definición</h3>
+		<p> 
+				<code>
+					<dl>
+					  < dt >Coffee< /dt > <br>
+					  < dd >Black hot drink< /dd > <br>
+					  < dt >Milk< /dt > <br>
+					  < dd >White cold drink< /dd > <br>
+					< /dl >		<br>
+				<br>
+					
+				</code>
+				<br>
+				El resultado sería este: <br>	
+					<dl>
+					  <dt>Coffee</dt>
+					  <dd>Black hot drink</dd>
+					  <dt>Milk</dt>
+					  <dd>White cold drink</dd>
+					</dl>
+
+		</p>
+	<h2>Tablas</h2>
+	
+</body>
+</html>
