@@ -1,0 +1,9 @@
+table, td, tr{
+	border: black 1px solid;
+	border-collapse: collapse;
+	text-align: center;
+}
+#titulo{
+	font-size: 25px;
+	font-weight: bold;
+}
