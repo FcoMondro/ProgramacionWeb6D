@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practicas 2</title>
+</head>
+<body>
+	<h1>Listas y Tablas en HTML</h1>
+		<h1>Listas</h1>
+			Las listas nos sirven para ordenas y tener una mejor vista, enseguida se mostraran los tipos de listas para html
+		<h2>Listas no ordenadas <code>< ul ></code></h2>
+			Las listas no ordenadas van dentro de la etiqueta <code>< ul ></code> y de su cierre <code>< /ul ></code>. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta <code>< li ></code> y su cierre.
+			Si no le indicamos nada a la etiqueta <code>< li ></code>, ésta se generará de forma automática. Pero si queremos definir nosotros mismo el símbolo del punto, podemos gracias al atributo <strong>“type”.</strong>
+
+				<h3>Ejemplo</h3>
+					<ul>
+						<li>Hector Manzo.</li>
+						<li>Edsel Barbosa.</li>
+						<li>Eduardo Jimenez.</li>
+					</ul>
+						Para usar el <strong>"type</strong> solo lo agregamos en la parte de <code>< li type="circle"></code> tambien esta <strong>square</strong> y <strong>disc</strong> que son figuras para usarlas en las listas no ordenadas.
+						<ul>
+							<li type="circle">Hector Manzo.</li>
+							<li type="square">Edsel Barbosa.</li>
+							<li type="disc">Eduardo Jimenez.</li>
+						</ul>
+						<h3>Codigo Fuente</h3>
+					<code>< ul ></code>
+						<br><code>< li type="circle">Hector Manzo.< /li ></code>
+						<br><code>< li type="square">Edsel Barbosa.< /li ></code>
+						<br><code>< li type="disc">Eduardo Jimenez.< /li ></code>
+					<br><code>< /ul ></code>
+		<h2>Listas Ordenadas <code>< ol ></code></h2>
+			Las listas ordenadas van enmarcadas dentro de las etiquetas <code> < ol > < /ol ></code>. Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: <code>< li ></code>. Pero al ser listas ordenadas los símbolos serán números y éstos se irán generando automáticamente por orden, conforme escribamos nuevos puntos.
+			En las listas ordenadas podemos hacer que el primer punto comience con el número que nosotros queramos. Lo conseguiremos gracias al atributo <strong>“value”.</strong> Los siguientes puntos que escribamos se generarán automáticamente por orden, partiendo de ese número
+				<h3>Ejemplo</h3>
+					<ol>
+						<li>Hector Manzo.</li>
+						<li>Edsel Barbosa.</li>
+						<li>Eduardo Jimenez.</li>
+					</ol>
+						Para usar y empezar la numeración donde usted desee debe usar el atributo <strong>"value"</strong> y el número que desee empezar, por ejemplo empezaremos desde el 5.
+					<ol>
+						<li value="5">Hector Manzo.</li>
+						<li>Edsel Barbosa.</li>
+						<li>Eduardo Jimenez.</li>
+					</ol>
+						Para ordenarlos con letras se pondria <strong>type="a" y para mayusculas type="A"</strong> en la parte de <code>< ol ></code> como lo muestra en el siguiente ejemplo:
+						<ol type=A>
+							<li>Hector Manzo.</li>
+							<li>Edsel Barbosa.</li>
+							<li>Eduardo Jimenez.</li>
+						</ol>
+						Para ordenarlos con numeros romanos <strong>type="i" y para mayusculas type="I"</strong> en la parte de <code>< ol ></code> como lo muestra en el siguiente ejemplo:
+							<ol type=I>
+								<li>Hector Manzo.</li>
+								<li>Edsel Barbosa.</li>
+								<li>Eduardo Jimenez.</li>
+							</ol>
+						<h3>Codigo Fuente</h3>
+							<code>< ol ></code>
+								<br><code>< li value="20">Hector Manzo.< /li ></code>
+								<br><code>< li >Edsel Barbosa.< /li ></code>
+								<br><code>< li >Eduardo Jimenez.< /li ></code>
+							<br><code>< /ol ></code>
+			<h2>Listas de definiciones <code>< dl >, < dt >, < dd >.</code></h2>
+				Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas <strong><code> < dl >, < dt > y < dd ></code></strong>. Vamos a explicarlas por partes:
+				La etiqueta <strong><code> < dl > </code></strong> viene de los términos ingleses “Definiton list” y nos indica que dentro de ella, entre ella y su cierre, va a ir una definición.
+
+				La etiqueta <strong><code>< dt ></code></strong> viene de los términos “Definition term” y dentro de ella irá el término que vamos a definir. Para entendernos mejor, dentro de <strong><code>< dt ></code></strong> iría el título de la definición.
+
+				La etiqueta <strong><code>< dd ></code></strong> viene de los términos “Definition description” y nos dice que dentro de ésta irá la definición.
+				Si escribimos varios listados de definición, éstas se separarán automáticamente entre ellas para facilitar su diferenciación.
+
+			<h3>Ejemplo</h3>
+				<dl>
+					<dt>Aquí va el término que definiremos</dt>
+					<dd>Y aquí dentro irá la definición propiamente dicha.</dd>
+				</dl>
+					<dl>
+						<dt>Aquí va la segunda definición</dt>
+						<dd>Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.</dd>
+					</dl>
+			<h3>Codigo Fuente</h3>
+				<code>< dl ></code>
+					<br><code>< dt >Aquí va el término que definiremos< /dt ></code>
+					<br><code>< dd >Y aquí dentro irá la definición propiamente dicha.< /dd ></code>
+				<code>< /dl ></code>
+				<code>< dl ></code>
+					<br><code>< dt >Aquí va la segunda definición< /dt ></code>
+					<br><code>< dd >Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.< /dd ></code>
+				<br><code>< /dl ></code>
+		<h2>Tablas</h2>
+			Las tablas son herramientas muy útiles para presentar datos en forma de tablas y para el diseño de páginas y ubicación de textos y gráficos dentro de las mismas.<br>
+			<h3>Características de las tablas</h3>
+				Definimos las tablas con la etiqueta <code>< table ></code>.<br>
+				La tabla está dividida en filas definidas con la etiqueta <code>< tr ></code>.<br>
+				Y a su vez cada fila dividida en celdas definidas con la etiqueta <code>< td ></code>.<br>
+				Las celdas pueden contener texto, imágenes, formularios, listas, otras tablas, etc.<br>
+			<h3>Sintaxis</h3>
+				<code>
+					&nbsp;< table ><br>
+						&nbsp;&nbsp;< tr ><br>
+							&nbsp;&nbsp;&nbsp;< td >contenido celda 1< /td ><br>
+							&nbsp;&nbsp;&nbsp;< td >contenido celda 2< /td ><br>
+						&nbsp;&nbsp;< /tr ><br>
+						&nbsp;< /table ><br>
+				</code>
+				<table border="1px">
+					<tr>
+						<td>Columna 1</td>
+						<td>Columna 2</td>
+					</tr>
+					<tr>
+						<td>Fila 1</td>
+						<td>Fila 2</td>
+					</tr>
+				</table>
+			<h3>Encabezados de las tablas</h3>
+			Los encabezados de una tabla se definen con la etiqueta <code>< th ></code> y simepre muestra los encabezados remarcados.<br>
+				<code>
+					&nbsp;< table border="1px" ><br>
+						&nbsp;&nbsp;< tr ><br>
+							&nbsp;&nbsp;&nbsp;< th >Nombre< /th ><br>
+							&nbsp;&nbsp;&nbsp;< th >Apellido< /th ><br>
+						&nbsp;&nbsp;< /tr ><br>
+						&nbsp;&nbsp;< tr ><br>
+							&nbsp;&nbsp;&nbsp;< td >Héctor< /td ><br>
+							&nbsp;&nbsp;&nbsp;< td >Manzo< /td ><br>
+						&nbsp;&nbsp;< /tr ><br>
+						&nbsp;&nbsp;< tr ><br>
+							&nbsp;&nbsp;&nbsp;< td >Edsel< /td ><br>
+							&nbsp;&nbsp;&nbsp;< td >Barbosa< /td ><br>
+						&nbsp;&nbsp;< /tr ><br>
+					&nbsp;< /table ><br>
+				</code>
+				<table border="1px">
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+					</tr>
+					<tr>
+						<td>Héctor</td>
+						<td>Manzo</td>
+					</tr>
+					<tr>
+						<td>Edsel</td>
+						<td>Barbosa</td>
+					</tr>
+				</table>
+			<h3>Márgenes de las celdas</h3>
+				Es el espacio que se encuentra entre los bordes de la celda y su contenido.Definimos los márgenes con el atributo <strong>cellpadding</strong>.<br>
+				<code>
+					&nbsp;< table border="1px" cellpadding="20px" ><br>
+						&nbsp;&nbsp;< tr ><br>
+							&nbsp;&nbsp;< th >Nombre< /th ><br>
+							&nbsp;&nbsp;< th >Apellido< /th ><br>
+						&nbsp;&nbsp;< /tr ><br>
+						&nbsp;&nbsp;< tr ><br>
+							&nbsp;&nbsp;&nbsp;< td >Héctor< /td ><br>
+							&nbsp;&nbsp;&nbsp;< td >Manzo< /td ><br>
+						&nbsp;&nbsp;< /tr ><br>
+					&nbsp;< /table ><br>
+				</code>
+				<table border="1px" cellpadding="20px">
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+					</tr>
+					<tr>
+						<td>Héctor</td>
+						<td>Manzo</td>
+					</tr>
+				</table>
+			<h3>Espaciado entre celdas</h3>
+				Es el espacio que se encuentra entre celda y celda.El mismo está definido con el atributo <strong>cellspacing</strong>.<br>
+				<code>
+					&nbsp;< table border="1px" cellspacing="15px" ><br>
+					&nbsp;&nbsp;< tr ><br>
+						&nbsp;&nbsp;&nbsp;< th >Nombre< /th ><br>
+						&nbsp;&nbsp;&nbsp;< th >Apellido< /th ><br>
+					&nbsp;&nbsp;< /tr ><br>
+					&nbsp;&nbsp;< tr ><br>
+						&nbsp;&nbsp;&nbsp;< td >Héctor< /td ><br>
+						&nbsp;&nbsp;&nbsp;< td >Manzo< /td ><br>
+					&nbsp;&nbsp;< /tr ><br>
+					&nbsp;< /table ><br>
+				</code>
+				<table border="1px" cellspacing="15px">
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+					</tr>
+					<tr>
+						<td>Héctor</td>
+						<td>Manzo</td>
+					</tr>
+				</table>
+			<h3>Etiquetas, atributos y definiciones</h3>
+				<table border="1px" cellspacing="0">
+					<tbody>
+					  <tr bgcolor"orange">
+					    <th>Etiquetas</th>
+					    <th>Atributos</th>
+					    <th>Valor</th>
+					    <th >Descripci&oacute;n</th>
+					  </tr>
+					  <tr>
+					    <td rowspan="29"><code>< /table ></code></td>
+					    <td> </td>
+					    <td> </td>
+					    <td>Define una tabla.</td>
+					  </tr>
+					  <tr>
+					    <td rowspan="3">align<br /></td>
+					    <td>left</td>
+					    <td rowspan="3">Alínea las tablas.</td>
+					  </tr>
+					  <tr>
+					    <td>center</td>
+					  </tr>
+					  <tr>
+					    <td>right</td>
+					  </tr>
+					  <tr>
+					    <td rowspan="3">bgcolor<br /></td>
+					    <td>rgb(x,x,x)</td>
+					    <td rowspan="3">Color de fondo de las tablas.</td>
+					  </tr>
+					  <tr>
+					    <td>#xxxxxx</td>
+					  </tr>
+					  <tr>
+					    <td>nombre_color</td>
+					  </tr>
+					  <tr>
+					    <td>border</td>
+					    <td>pixels</td>
+					    <td>Espesor del borde de la tabla.</td>
+					  </tr>
+					  <tr>
+					    <td rowspan="2">cellpadding</td>
+					    <td>pixels</td>
+					    <td rowspan="2">Espacio entre la pared de la celda y el contenido.</td>
+					  </tr>
+					  <tr>
+					    <td>%</td>
+					  </tr>
+					  <tr>
+					    <td rowspan="2">cellspacing</td>
+					    <td>pixels</td>
+					    <td rowspan="2">Espacio entre celdas.</td>
+					  </tr>
+					  <tr>
+					    <td>%</td>
+					</tr>
+					<tr>
+					<td rowspan="9">frame</td>
+					<td>void</td>
+					<td rowspan="9">Especifica cual de los bordes alrededor de la tabla será visible.</td>
+					</tr>
+					<tr>
+					<td>above</td>
+					  </tr>
+					  <tr>
+					    <td>below</td>
+					  </tr>
+					  <tr>
+					    <td>hsides</td>
+					  </tr>
+					  <tr>
+					    <td>lhs</td>
+					  </tr>
+					  <tr>
+					    <td>rhs</td>
+					  </tr>
+					  <tr>
+					    <td>vsides</td>
+					  </tr>
+					  <tr>
+					    <td>box</td>
+					</tr>
+					<tr>
+					<td>border</td>
+					</tr>
+					<tr>
+					<td rowspan="5">rules</td>
+					<td>none</td>
+					<td rowspan="5">Especifica las líneas divisorias horizontales y verticales.</td>
+					</tr>
+					<tr>
+					<td>groups</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>rows</td>
+					</tr>
+					<tr>
+					<td>cols</td>
+					</tr>
+					<tr>
+					<td>all</td>
+					</tr>
+					<tr>
+					<td>summary</td>
+					<td>texto</td>
+					<td>Resumen del contenido de la tabla para navegadores sin visualizador.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="2">width</td>
+					<td>%</td>
+					<td rowspan="2">Especifica el ancho de la tabla.</td>
+					</tr>
+					<tr>
+					<td>pixels</td>
+					</tr>
+					<tr>
+					<td rowspan="16"><code>< tr ></code></td>
+					<td> </td>
+					<td> </td>
+					<td>Define una fila.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="5">align</td>
+					<td>right</td>
+					<td rowspan="5">Alínea horizontalmente el texto en la celda.</td>
+					</tr>
+					<tr>
+					<td>left</td>
+					</tr>
+					<tr>
+					<td>center</td>
+					</tr>
+					<tr>
+					<td>justify</td>
+					</tr>
+					<tr>
+					<td>char</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="3">bgcolor<br /></td>
+					<td>rgb(x,x,x)</td>
+					<td rowspan="3">Color de fondo de las celdas.</td>
+					</tr>
+					<tr>
+					<td>#xxxxxx</td>
+					</tr>
+					<tr>
+					<td>nombre_color</td>
+					</tr>
+					<tr>
+					<td>char</td>
+					<td>carácter</td>
+					<td>Especifica que un carácter ("."o",") actúe como eje de alineación.<br /></td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="2">charoff</td>
+					<td>pixels</td>
+					<td rowspan="2">Especifica la distancia entre el borde y el primer carácter de alineación en cada línea.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>%</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="4">valign</td>
+					<td>top</td>
+					<td rowspan="4">Especifica la posición vertical de los datos dentro de la celda.</td>
+					</tr>
+					<tr>
+					<td>middle</td>
+					</tr>
+					<tr>
+					<td>bottom</td>
+					</tr>
+					<tr>
+					<td>baseline</td>
+					</tr>
+					<tr>
+					<td rowspan="30"><code>< td ></code><br /><code>< th ></code>
+					</td>
+					<td> </td>
+					<td> </td>
+					<td>Define una celda.</td>
+					</tr>
+					<tr>
+					<td> </td>
+					<td> </td>
+					<td>Define los encabezados de una tabla.</td>
+					</tr>
+					<tr>
+					<td>abbr</td>
+					<td>texto abreviado</td>
+					<td>Especifica una versión abreviada del contenido de una celda.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="5">align</td>
+					<td>left</td>
+					<td rowspan="5">Alínea horizontalmente el texto en la celda.</td>
+					</tr>
+					<tr>
+					<td>right</td>
+					</tr>
+					<tr>
+					<td>center</td>
+					</tr>
+					<tr>
+					<td>justify</td>
+					</tr>
+					<tr>
+					<td>char</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>axis</td>
+					<td>nombre de la categoría</td>
+					<td>Sitúa una celda en categorías conceptuales.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="3">bgcolor<br /></td>
+					<td>rgb(x,x,x)</td>
+					<td rowspan="3">Color de fondo de las celdas.</td>
+					</tr>
+					<tr>
+					<td>#xxxxxx</td>
+					</tr>
+					<tr>
+					<td>nombre_color</td>
+					</tr>
+					<tr>
+					<td>char</td>
+					<td>carácter</td>
+					<td>Especifica que un carácter actúe como eje de alineación.<br /></td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="2">charoff</td>
+					<td>pixels</td>
+					<td rowspan="2">Especifica la distancia entre el borde y el primer carácter de alineación en cada línea.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>%</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>colspan</td>
+					<td>número</td>
+					<td>Indica el número de columnas que esta celda debe anexar.</td>
+					</tr>
+					<tr>
+					<td>headers</td>
+					<td>lista de nombres de celdas</td>
+					<td>Lista de celdas de encabezado que proporcionan información de encabezado para la celda de datos actual.</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>height<br /></td>
+					<td>pixels</td>
+					</tr>
+					<tr>
+					<td>nowrap<br /></td>
+					<td>nowrap</td>
+					</tr>
+					<tr>
+					<td>rowspan</td>
+					<td>número</td>
+					<td>Indica el número de filas que esta celda debe anexar.</td>
+					</tr>
+					<tr>
+					<td rowspan="4">scope</td>
+					<td>col</td>
+					<td rowspan="4">Este atributo especifica el conjunto de celdas de datos para las cuales la celda de encabezado actual proporciona información de encabezado.</td>
+					</tr>
+					<tr>
+					<td>colgroup</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td>row</td>
+					</tr>
+					<tr>
+					<td>rowgroup</td>
+					<td> </td>
+					</tr>
+					<tr>
+					<td rowspan="4">valign</td>
+					<td>top</td>
+					<td rowspan="4">Especifica la posición vertical de los datos dentro de una celda.</td>
+					</tr>
+					<tr>
+					<td>middle</td>
+					</tr>
+					<tr>
+					<td>bottom</td>
+					</tr>
+					<tr>
+					<td>baseline</td>
+					</tr>
+					<tr>
+					<td rowspan="2">width<br /></td>
+					<td>pixels</td>
+					<td rowspan="2">Especifica el ancho de la celda.</td>
+					</tr>
+					<tr>
+					<td>%</td>
+					</tr>
+					<tr>
+						<td rowspan="5"><code>< caption ></code></td>
+						<td> </td>
+						<td> </td>
+						<td>Define el título de la tabla.</td>
+					</tr>
+					<tr>
+						<td rowspan="4">align<br /></td>
+						<td>top</td>
+						<td rowspan="4">Ubicación del título con respecto a la tabla..</td>
+					</tr>
+					<tr>
+						<td>bottom</td>
+					</tr>
+					<tr>
+						<td>left</td>
+					</tr>
+					<tr>
+						<td>right</td>
+					</tr>
+					<tr>
+						<td rowspan="18"><code>< colgroup ></code><br /><code>< col ></code></td>
+						<td> </td>
+						<td> </td>
+						<td>Crea un grupo explícito de columnas.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td>Permite a los autores compartir atributos entre varias columnas.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="5">align</td>
+						<td>right</td>
+						<td rowspan="5">Alínea horizontalmente el contenido en el grupo de columnas.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>left</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>center</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>justify</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>char</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>char</td>
+						<td>carácter</td>
+						<td>Especifica que un carácter actúe como eje de alineación.<br /><strong>Nota:</strong> usar junto con align="char".</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="2">charoff</td>
+						<td>pixels</td>
+						<td rowspan="2">Especifica la distancia entre el borde y el primer carácter de alineación en cada línea.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>span</td>
+						<td>número</td>
+						<td>Especifica el número de columnas de un grupo de columnas.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="4">valign</td>
+						<td>top</td>
+						<td rowspan="4">Alínea verticalmente el contenido en el grupo de columnas.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>middle</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>bottom</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>baseline</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="3">width</td>
+						<td>%</td>
+						<td rowspan="3">Define el ancho del grupo de columnas.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>pixels</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>longitud relativa</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="13"><code>< thead ></code><br /><code>< tbody ></code><br /><code>< tfoot ></code></td>
+						<td> </td>
+						<td> </td>
+						<td>Las filas de una tabla pueden agruparse en una cabecera de tabla <code>< thead ></code>, un pie de tabla <code>< tfoot ></code> y una o más secciones de cuerpo de tabla <code>< tbody ></code>.</td>
+					</tr>
+					<tr>
+						<td rowspan="5">align</td>
+						<td>right</td>
+						<td rowspan="5">Alínea horizontalmente el texto en la celda.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>left</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>center</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>justify</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>char</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>char</td>
+						<td>character</td>
+						<td>Especifica que un carácter actúe como eje de alineación.<br /></td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="2">charoff</td>
+						<td>pixels</td>
+						<td rowspan="2">Especifica la distancia entre el borde y el primer carácter de alineación en cada línea.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>%</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td rowspan="4">valign</td>
+						<td>top</td>
+						<td rowspan="4">Especifica la posición vertical de los datos dentro de la celda.</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>middle</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>bottom</td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>baseline</td>
+						<td> </td>
+					</tr>
+				</tbody>
+				</table>
+
+</body>
+</html>
