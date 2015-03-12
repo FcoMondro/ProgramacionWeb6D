@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practica 5</title>
+</head>
+<body>
+	<form>
+		<input type = "text" required value = ""/>
+		<input type= "submit" value= "Submit"/>
+	</form>
+
+	<form>
+		<input id= "foo" type = "number" min="2" value = "3"/>
+		<input id = "bar" type ="number" min="2" value = "1"/>
+		<input type = "submit" value = "Submit">
+
+	</form>
+
+	<form>
+		<input id="foo" title="Codigo postal debe iniciar con 28" pattern="^28[0-9]{3}$" value=" "/>
+		<input id="bar" pattern="[0-9]{4}" value="ABCD"/>
+		<input type="submit" value="Submit">
+	</form>
+
+	<form>
+		<input id="foo" type="url" value="http://foo.com"/>
+		<input id="bar" type="url" value="foo"/>
+		<input id="foo2" type="email" pattern="@ucol.mx$" title="Solo se admiten corres @ucol.mx" value="@ucol.mx"/>
+		<input id="bar2" type="email" value="bar"/>
+		<input type="submit" value="Submit"> 
+	</form>
+	
+</body>
+</html>

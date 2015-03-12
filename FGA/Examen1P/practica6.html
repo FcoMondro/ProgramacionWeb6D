@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Practica 6</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h1 class="text-center">Practica 6</h1>
+	<div class="well container">
+		<form action="" method="POST" role="form">
+			<legend>Validacion</legend>
+		
+			<div class="form-group">
+				<label for="">Nombre</label>
+				<input type="text" class="form-control" id="" placeholder="Nombre" maxlength="50" required value="" title="Nombre max 50">
+				<label for="">Edad</label>
+				<input type="number" class="form-control" id="" placeholder="Edad" min="18" max="50" required value="" title="Minimo 18 max 50">
+				<label for="">Teléfono</label>
+				<input type="text" class="form-control" id="" placeholder="Teléfono" required value="" pattern="^\([0-9]{1,3}\)[0-9]{3}\-[0-9]{4}$" title="Ejemplo: (111)111-1111">
+				<label for="">CURP</label>
+				<input type="text" class="form-control" id="" placeholder="CURP" min="18" max="18" required value="" pattern="^[A-Z][AEIOUX][A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])[H|M](CM|JC|MN|SL|BC|BS|AS)[B-D F-H J-N P-T V-Z]{3}[A-Z 0-9][0-9]$" Title="Ejemplo: VAPK930921MJC02">
+				<label for="">RFC</label>
+				<input type="text" class="form-control" id="" placeholder="RFC" maxlength="18" minlength="18" required value="" pattern="^[A-Z][AEIOUX][A-Z]{2}[0-9]{2}(0[1-9]|1[1-2])(0[1-9]|[1-2][0-9]|3[0-1])[A-Z 0-9]{3}$" title="Ejemplo: VAPK930921MB3">
+
+
+			</div>
+		
+			
+		
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+		<!-- jQuery -->
+		<script src="js/code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
