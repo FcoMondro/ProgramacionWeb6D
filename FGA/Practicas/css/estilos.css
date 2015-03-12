@@ -1,0 +1,43 @@
+/* 1. Se definen los estilos apra las etiquwtas*/
+/* 2.Se definen los estilos para etiquetas con identificadores*/
+/*3.Se definen los estilos para las clases*/
+
+*
+{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+	background: #212121;
+	color:#fff;/*Blanco (color siempre se refiere al color de las letras*/
+	font-size: 16px; 
+}
+a
+{
+	color: #f60;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover
+{
+	color:#009999;
+}
+article
+{
+	margin:0 auto;
+	text-align: justify;
+	width: 90%;
+}
+
+h1
+{
+	text-align: center;
+}
+
+footer
+{
+  text-align: center;
+}
