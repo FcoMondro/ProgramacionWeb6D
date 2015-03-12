@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tarea Listas y Tablas</title>
+</head>
+<body>
+	<h1>Listas</h1>
+
+	<h2>Listas no ordenadas</h2>
+
+	<p>
+		Las listas no ordenadas van dentro de la etiqueta < ul > y de su cierre < /ul >. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta < li > y su cierre.<br>
+
+		Si no le indicamos nada a la etiqueta < li >, ésta se generará de forma automática. Pero si queremos definir nosotros mismo el símbolo del punto, podemos gracias al atributo “type”.<br>
+
+		Así podemos hacer que la lista esté definida por puntos negros (li type="disc"), por puntos con el fondo blanco (li type="circle") o por cuadrados (li type="square"). Aunque esta apariencia dependerá del navegador. Hay algunos navegadores que dan otras apariencias a estos mismos atributos.<br>
+		Vamos con un pequeño ejemplo en código:<br>
+
+		< ul ><br>
+		< li type="circle" >Esto es un tipo de punto.< /li ><br>
+		< li type="square" >Este es otro.< /li ><br>
+		< li type="disc" >Y este es otro diferente.< /li ><br>
+		< /ul ><br>
+		Cuyo resultado visual será el que veremos a continuación:
+		<ul>
+		<li type="circle">Esto es un tipo de punto.</li>
+		<li type="square">Este es otro.</li>
+		<li type="disc">Y este es otro diferente.</li>
+		</ul>
+	</p>
+
+	<h2>Listas ordenadas</h2>
+
+	<p>
+		Las listas ordenadas van enmarcadas dentro de las etiquetas < ol > < /ol >. Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: < li >. Pero al ser listas ordenadas los símbolos serán números y éstos se irán generando automáticamente por orden, conforme escribamos nuevos puntos.<br>
+
+		En las listas ordenadas podemos hacer que el primer punto comience con el número que nosotros queramos. Lo conseguiremos gracias al atributo “value”. Los siguientes puntos que escribamos se generarán automáticamente por orden, partiendo de ese número.<br>
+		Por ejemplo, si queremos que nuestra lista empiece por el número 20, sólo deberemos escribir lo siguiente:<br>
+
+		< ol ><br>
+		< li value="20" >Este será el número 20. < /li ><br>
+		< li >Este será el 21. < /li ><br>
+		< li > Este será el 22. Y así sucesivamente. < /li ><br>
+		< /ol ><br>
+		Y el resultado será el siguiente:<br>
+		<ol>
+		<li value="20">Este será el número 20. </li>
+		<li>Este será el 21. </li>
+		<li> Este será el 22. Y así sucesivamente. </li>
+		</ol>
+	</p>
+
+	<h2>Listas de definiciones</h2>
+
+	<p>
+		Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas < dl >, < dt > y < dd >. Vamos a explicarlas por partes:<br>
+
+		La etiqueta < dl > viene de los términos ingleses “Definiton list” y nos indica que dentro de ella, entre ella y su cierre, va a ir una definición.<br>
+
+		La etiqueta < dt > viene de los términos “Definition term” y dentro de ella irá el término que vamos a definir. Para entendernos mejor, dentro de < dt > iría el título de la definición.<br>
+
+		La etiqueta < dd > viene de los términos “Definition description” y nos dice que dentro de ésta irá la definición.<br>
+
+		Si escribimos varios listados de definición, éstas se separarán automáticamente entre ellas para facilitar su diferenciación.<br>
+		Aquí podemos ver un ejemplo de código de dos listado de definición:
+
+		< dl ><br>
+		< dt >Aquí va el término que definiremos< /dt ><br>
+		< dd >Y aquí dentro irá la definición propiamente dicha.< /dd ><br>
+		< /dl ><br>
+		< dl ><br>
+		< dt >Aquí va la segunda definición< /dt ><br>
+		< dd >Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.< /dd ><br>
+		< /dl ><br>
+		Cuyo resultado será el siguiente:<br>
+		<dl>
+		<dt>Aquí va el término que definiremos</dt>
+		<dd>Y aquí dentro irá la definición propiamente dicha.</dd>
+		</dl>
+		<dl>
+		<dt>Aquí va la segunda definición</dt>
+		<dd>Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.</dd>
+		</dl>
+	<p>
+
+	<h2>Atributos de listas</h2>
+
+	<p>
+		type  =  información de estilo [CI]<br>
+		Desaprobado. Este atributo especifica el estilo de un objeto de lista. Los valores disponibles son para los agentes de usuario visuales. Los valores posibles 	se describen más abajo (junto con la información sobre las diferencias entre mayúsculas y minúsculas).<br>
+		start = number [CN]<br>
+		Desaprobado. Sólo para OL. Este atributo especifica el número del primer objeto de una lista ordenada. El número inicial por defecto es el "1". Obsérvese que 	si bien el valor de este atributo es un entero, el rótulo correspondiente puede no ser numérico. Así, por ejemplo, cuando el estilo de objeto de lista es de 	letras latinas mayúsculas (A, B, C, ...), start=3 significa "C". Cuando el estilo es de numerales romanos en minúsculas, start=3 significa "iii", etc.<br>
+		value = number [CN]<br>
+		Desaprobado. Sólo para LI. Este atributo establece el número del objeto de lista actual. Obsérvese que si bien el valor de este atributo es un entero, el 	rótulo correspondiente puede no ser numérico (véase el atributo start).<br>
+		compact [CI]<br>
+		Desaprobado. Si está establecido, este atributo booleano indica a los agentes de usuario visuales que representen la lista de un modo más compacto. La 	interpretación de este atributo depende del agente de usuario.<br>
+	<p>
+	
+	<h1>Tablas</h1>
+
+	<p>
+		Una tabla en html viene marcada por las etiquetas < table > < /table >. Entre esas dos etiquetas definiremos la tabla, las celdas que queremos, las columnas y las características de cada uno de estos parámetros. Pero vamos a empezar explicándote la etiqueta < table >.<br>
+		Ya hemos dicho que esta etiqueta nos indica que empieza una tabla, pero… ¿podemos predefinir  características de esa tabla? Por supuesto que sí. Una tabla admite muchos parámetros. Nosotros vamos a explicarte los principales.<br>
+	</p>
+	
+	<h2>Las Tablas < table ></h2>
+
+	<p>
+		Como ya ocurre con la etiqueta body, a una tabla también lo podemos definir el fondo de la misma. Esto lo podemos conseguir con el parámetro"bgcolor", que nos pondrá un color de fondo,  o "background" para poner una imagen de fondo. Recuerda que si la imagen es más pequeña que la tabla, ésta se repetirá tanto a lo ancho como a lo largo.<br>
+		Otro aspecto que podemos definir de la tabla es el borde. Esto lo haremos con el parámetro "border". Como en todas los parámetros que ya hemos visto escribiremos: border= "x" siendo la x un número. Ese número indicará el grosor del borde. Si no ponemos borde o lo escribimos "0", la tabla no mostrará borde ninguno. Por supuesto, también podemos darle color al borde, escribiendo la etiqueta "bordercolor" e indicando el color que queramos para nuestro borde.<br>
+		El parámetro "width" indircará la anchura de la tabla. Esta anchura la podemos poner en píxeles (width= "300") o con porcentaje (width= "100%").<br>
+		Dos parámetros más son cellspacing (que define el espacio entre las celdas de la tabla) y cellpadding  (que le marca a la tabla el espacio que debe dejar alrededor del texto dentro de una celda).<br>
+		Como ejemplo, escribiremos el hipotético supuesto de querer una tabla que sea ancha al 100%, con un borde azul de un píxel de grosor y con un cellpadding de 10 y con un cellspacing de 10. El código quedaría de la siguiente forma.<br>
+		< table width="100%" border="1" bordercolor="#0000FF" cellspacing="10" cellpadding="10" >< /table ><br>
+    </p>
+	<p>
+		asi seria como se veria al final.<br>
+		<table width="100%" border="1" bordercolor="#0000FF" cellspacing="10" cellpadding="10"></table><br>
+	</p>
+					
+	<h2>Las filas < tr ></h2>
+	
+	<p>
+		Como hemos visto en el encabezado las filas se escriben gracias a las etiquetas < tr > con su correspondiente cierre < /tr >. El contenido de las columnas que están dentro de la fila lo podemos alínear tanto horizontal como verticalmente.<br>
+
+		Para alinearlo verticalmente utilizaremos el atributo "valign" para poder alinearlo arriba de la celda ("top"), en el centro ("middle") o debajo ("bottom").<br>
+
+		Para alinearlo horizontalmente utilizaremos el atributo "align". Con este atributo podremos alinear el contenido de las celdas en el centro ("center"), a la izquierda ("left"), a la derecha ("right") o justificado ("justify").<br>
+
+		Por supuesto a las filas también les podemos definir el color de fondo ("bgcolor") y el color del borde ("bordercolor").<br>
+	</p>
+
+	<h2>Las celdas < td ></h2>
+	
+	<p>
+		Las celdas que van dentro de cada fila las tenemos que escribirlas con la etiqueta < td > y su correspondiente cierre < /td >.<br>
+
+		Al igual que en las filas, en las celdas podemos definir el la alineación del contenido que está dentro con los atributos "valign" y "align".<br>
+
+		Las celdas poseen unos atributos que nos ayudan a poder agrupar tantas celdas o tantas columnas como indiquemos en él. Para agrupar celdas utilizaríamos el atributo "colspan" y para agrupar celdas el atributo "rowspan".<br>
+	</p>
+
+	<h2>Tablas B&aacute;sicas</h2>
+
+	<p>
+		Las tablas más sencillas de HTML se definen con tres etiquetas: 
+		< table > para crear la tabla, < tr > para crear cada fila y < td > para crear cada columna. <br>	
+	</p>
+
+	<p>
+		<li type="disc">Etiqueta < table >: Se emplea para definir tablas de datos. <br></li> 
+		Sus atributos comunes son los b&aacute;sicos, internacionalizaci&oacute;n y eventos.<br>
+		Sus atributos propios son summary = "texto" - Permite describir el contenido de la tabla (lo utilizan los buscadores y las personas discapacitadas). <br>
+	</p>
+
+	<p>
+		<li type="disc">Etiqueta < tr >: Se emplea para definir cada fila de las tablas de datos. <br></li> 
+		<br>
+		Sus atributos comunes son los b&aacute;sicos, internacionalizaci&oacute;n y eventos.<br>
+		No tiene atributos propios. <br>
+	</p>
+
+	<p>
+		<li type="disc"> Etiqueta < td >: Se emplea para definir cada una de las celdas que forman las filas de una tabla, es decir, las columnas de la tabla. </li>
+
+		<br>
+		Sus atributos comunes son los b&aacute;sicos, internacionalizaci&oacute;n y eventos.<br>
+		Sus atributos propios son: <br>
+
+		- abbr = "texto" - Permite describir el contenido de la celda (empleado sobre todo en los navegadores utilizados por personas discapacitadas). <br>
+		<br>
+
+		- headers = "lista_de_id" - Indica las celdas que actúan como cabeceras para esta celda (los títulos de las columnas y filas). Se indica como una lista de valores del atributo "id" de celdas.
+		<br>
+
+		- scope = "col, row, colgroup, rowgroup" - Indica las celdas para las que esta celda será su cabecera. <br>
+		<br>
+
+		Ej: scope="col" indica que esta celda es la cabecera de todas las demás celdas que están en la misma columna. <br>
+		<br>
+
+		- colspan = "numero" - Número de columnas que ocupa esta celda.
+		<br>
+
+		- rowspan = "numero" - Número de filas que ocupa esta celda.
+		<br>
+	</p>
+
+	<p>
+		De todos los atributos disponibles para las celdas, los más utilizados son rowspan y colspan, que se emplean para construir tablas complejas. Entre los demás atributos, sólo se utiliza de forma habitual el atributo scope, sobre todo con las celdas de cabecera.<br> 
+		<br>
+
+		Normalmente, algunas de las celdas de la tabla se utilizan como cabecera de las demás celdas de la fila o de la columna. En este caso, HTML define la etiqueta < th > (del inglés "table header cell") para indicar que una celda es cabecera de otras celdas. 
+		<br>			
+	</p>
+
+	<p>
+		<li type="disc"> Etiqueta < th >: Se emplea para definir las celdas que son cabecera de una fila o de una columna de la tabla. <br></li>
+		<br>
+
+		Sus atributos comunes son los b&aacute;sicos, internacionalizaci&oacute;n y eventos.<br>
+		Sus atributos propios son: <br>
+
+		- abbr = "texto" - Permite describir el contenido de la celda (empleado sobre todo en los navegadores utilizados por personas discapacitadas). <br>
+
+		<br>
+		- headers = "lista_de_id" - Indica las celdas que actúan como cabeceras para esta celda (los títulos de las columnas y filas). Se indica como una lista de ID de celdas. <br>
+
+		<br>
+		- scope = "col, row, colgroup, rowgroup" - Indica las celdas para las que esta celda será su cabecera. Ej: scope="col" indica que esta celda es la cabecera de todas las demás celdas que están en la misma columna. <br>
+
+		<br>
+		- colspan = "numero" - Número de columnas que ocupa esta celda. 
+		<br>
+		- rowspan = "numero" - Número de filas que ocupa esta celda.
+		<br>
+	</p>
+
+	<p>
+		Los atributos de la etiqueta < th > son idénticos que los atributos definidos para la etiqueta < td >. En este caso, el atributo más utilizado es scope, que permite indicar si la celda es cabecera de la fila o de la columna (< th scope="row"> y < th scope="col"> respectivamente).<br>
+		<br>
+
+		Por otra parte, HTML define la etiqueta < caption > para establecer la leyenda o título de una tabla. La etiqueta debe colocarse inmediatamente después de la etiqueta < table > y cada tabla sólo puede incluir una etiqueta < caption >. <br>
+	</p>
+
+	<p>
+		<li type="dic"> Etiqueta < caption >: Se emplea para definir la leyenda o título de una tabla. <br></li>
+		<br>
+		Sus atributos comunes son los b&aacute;sicos, internacionalizaci&oacute;n y eventos.<br>
+		No tiene atributos propios. <br>
+	</p>
+
+	<p>
+		Ejemplo usando las etiquetas antes explicadas <br>
+		<table>
+		<tr>
+  		<td><strong>Curso</strong></td>
+  		<td><strong>Horas</strong></td>
+  		<td><strong>Horario</strong></td>
+		</tr>
+ 
+		<tr>
+  		<td>CSS</td>
+  		<td>20</td>
+  		<td>16:00 - 20:00</td>
+		</tr>
+ 
+		<tr>
+  		<td>HTML</td>
+  		<td>20</td>
+  		<td>16:00 - 20:00</td>
+		</tr>
+ 
+		<tr>
+  		<td>Dreamweaver</td>
+  		<td>60</td>
+  		<td>16:00 - 20:00</td>
+		</tr>
+		</table>
+
+		<br>
+		<br>
+		Su c&oacute;digo es:<br>
+
+		< table ><br>
+		< tr ><br>
+  		< td >< strong >Curso< /strong >< /td ><br>
+  		< td >< strong >Horas< /strong >< /td ><br>
+  		< td >< strong >Horario< /strong >< /td ><br>
+		< /tr ><br>
+ 
+		< tr ><br>
+  		< td >CSS< /td><br>
+  		< td >20< /td><br>
+  		< td >16:00 - 20:00< /td><br>
+		< /tr ><br>
+ 
+		< tr ><br>
+  		< td >HTML< /td ><br>
+  		< td >20< /td ><br>
+  		< td >16:00 - 20:00< /td ><br>
+		< /tr ><br>
+ 
+		< tr ><br>
+  		< td >Dreamweaver< /td ><br>
+  		< td >60< /td ><br>
+  		< td >16:00 - 20:00< /td ><br>
+		< /tr ><br>
+		< /table ><br>
+	</p>
+
+	<h2>Tablas Avanzadas</h2>
+
+	<p>
+		Algunas tablas complejas están formadas por más elementos que filas y celdas de datos. Así, es común que las tablas más avanzadas dispongan de una sección de cabecera, una sección de pie y varias secciones de datos. Además, también es posible agrupar varias columnas de forma lógica para poder aplicar estilos similares a un determinado grupo de columnas.<br>
+		<br>
+		Las partes que componen las tablas complejas se definen mediante las etiquetas < thead >, < tbody > y < tfoot >. La cabecera de la tabla se define con la etiqueta < thead >, el pie de la tabla se define mediante < tfoot > y cada sección de datos se define con una etiqueta < tbody >.<br>
+		<br>
+		Cada tabla puede contener solamente una cabecera y un pie, pero puede incluir un número ilimitado de secciones. Si se define una cabecera y/o un pie, las etiquetas < thead > y/o < tfoot > deben colocarse inmediatamente antes que cualquier etiqueta < tbody >.
+		<br>
+	</p>
+
+	<p>
+		El elemento < tfoot > siempre se escribe antes que cualquier elemento < tbody > en el código HTML. De hecho, si la etiqueta < tfoot > aparece después de un elemento < tbody >, la página no se considera válida.<br>
+		<br>
+
+		La etiqueta < tbody > permite realizar agrupaciones de filas, pero en ocasiones se necesitan agrupar columnas. Aunque su uso no es muy común, HTML define dos etiquetas similares para agrupar columnas: < col > y < colgroup >.<br>
+		<br>
+
+		La etiqueta < col > se utiliza para asignar los mismos atributos a varias columnas de forma simultánea. De esta forma, la etiqueta < col > no agrupa columnas, sino que sólo asigna atributos comunes a varias columnas.<br>
+	</p>
+
+	<p>
+		Ejemplo usando la etiqueta < col ><br> <br>
+		<table summary="Análisis de ventas anuales">
+  		<caption>Análisis de ventas anuales</caption>
+ 
+  		<col style="width:10%;" />
+  		<col style="width:30%;" />
+ 
+  		<thead>
+   	 	<tr>
+      	<th scope="col">AÑO</th>
+      	<th scope="col">Producto A</th>
+      	<th scope="col">Producto B</th>
+      	<th scope="col">Producto C</th>
+      	<th scope="col">Producto D</th>
+    	</tr>
+  		</thead>
+ 
+ 	 	<tbody>
+    	<tr>
+    	<th scope="row">N-3</th><td>-</td><td>-</td><td>-</td><td>-</td>
+    	</tr>
+    	<tr>
+      	<th scope="row">N-2</th><td>3</td><td>5</td><td>8</td><td>4</td>
+    	</tr>
+   	 	<tr>
+      	<th scope = "row">N-1</th><td>4</td> <td>4</td><td>7</td><td>3</td>
+    	</tr>
+    	<tr>
+      	<th scope="row">N</th><td>5</td><td>7</td><td>6</td><td>2</td>
+    	</tr>
+  		</tbody>
+		</table>
+		<br>
+
+		El c&oacute;digo es: <br>
+		< table summary="Análisis de ventas anuales"><br>
+  		< caption>Análisis de ventas anuales< /caption><br>
+ 
+  		< col style="width:10%;" /><br>
+  		< col style="width:30%;" /><br>
+ 
+  		< thead><br>
+   	 	< tr><br>
+      	< th scope="col">AÑO</ th><br>
+      	< th scope="col">Producto A</ th><br>
+      	< th scope="col">Producto B</ th><br>
+      	< th scope="col">Producto C</ th><br>
+      	< th scope="col">Producto D</ th><br>
+    	< /tr><br>
+  		< /thead><br>
+ 
+ 	 	< tbody><br>
+    	< tr><br>
+    	< th scope="row">N-3</ th>< td>-< /td>< td>-< /td>< td>-< /td>< td>-</ td><br>
+    	< /tr><br>
+    	< tr><br>
+      	< th scope="row">N-2< /th>< td>3< /td>< td>5</ td>< td>8< /td>< td>4</ td><br>
+    	< /tr><br>
+   	 	< tr><br>
+      	< th scope="row">N-1< /th>< td>4< /td>< td>4< /td>< td>7< /td><td>3< /td><br>
+    	< /tr><br>
+    	< tr><br>
+      	< th scope="row">N< /th>< td>5< /td>< td>7< /td>< td>6< /td>< td>2< /td><br>
+    	< /tr><br>
+  		< /tbody><br>
+		< /table><br>
+	</p>
+
+	<p>
+		La etiqueta < colgroup > se emplea para agrupar de forma estructural varias columnas de la tabla. La forma habitual de indicar el número de columnas que abarca la agrupación es utilizar el atributo span, que establece el número de columnas de cada agrupación.<br>
+		<br>
+
+		Ejemplo usando la etiqueta < colgroup ><br><br>
+
+		<table summary="Análisis de ventas anuales">
+  		<caption>Análisis de ventas anuales</caption>
+ 
+  		<colgroup span="1" style="color:red;" />
+  		<colgroup span="3" style="color:blue;" />
+ 
+  		<thead>
+    	<tr>
+      	<th scope="col">AÑO</th>
+      	<th scope="col">Producto A</th>
+      	<th scope="col">Producto B</th>
+      	<th scope="col">Producto C</th>
+      	<th scope="col">Producto D</th>
+    	</tr>
+  		</thead>
+ 
+  		<tbody>
+    	<tr>
+      	<th scope="row">N-3</th><td>-</td><td>-</td><td>-</td><td>-</td>
+    	</tr>
+   	 	<tr>
+      	<th scope="row">N-2</th><td>3</td><td>5</td><td>8</td><td>4</td>
+    	</tr>
+    	<tr>
+      	<th scope="row">N-1</th><td>4</td><td>4</td><td>7</td><td>3</td>
+    	</tr>
+    	<tr>
+      	<th scope="row">N</th><td>5</td><td>7</td><td>6</td><td>2</td>
+    	</tr>
+  		</tbody>
+		</table>
+		<br>
+	</p>
+
+	<p>
+		El c&oacute;digo del ejemplo es:<br><br>
+		< table summary="Análisis de ventas anuales"><br>
+  		< caption>Análisis de ventas anuales</ caption><br>
+ 
+  		< colgroup span="1" style="color:red;" /><br>
+  		< colgroup span="3" style="color:blue;" /><br>
+ 
+  		< thead><br>
+    	< tr><br>
+      	< th scope="col">AÑO< /th><br>
+      	< th scope="col">Producto A< /th><br>
+      	< th scope="col">Producto B< /th><br>
+      	< th scope="col">Producto C< /th><br>
+      	< th scope="col">Producto D< /th><br>
+    	< /tr><br>
+  		< /thead><br>
+ 
+  		< tbody><br>
+    	< tr><br>
+      	< th scope="row">N-3< /th>< td>-< /td>< td>-< /td>< td>-< /td>< td>-< /td><br>
+    	< /tr><br>
+   	 	< tr><br>
+      	< th scope="row">N-2< /th>< td>3< /td>< td>5< /td>< td>8< /td>< td>4< /td><br>
+    	< /tr><br>
+    	< tr><br>
+      	< th scope="row">N-1< /th>< td>4< /td>< td>4< /td>< td>7< /td>< td>3< /td><br>
+    	< /tr><br>
+    	< tr><br>
+      	< th scope="row">N< /th>< td>5< /td>< td>7< /td>< td>6< /td>< td>2< /td><br>
+    	< /tr><br>
+  		< /tbody><br>
+		< /table><br>
+	</p>
+
+	<p>
+		<li>Las etiquetas < thead > < tbody > < tfoot >:Se emplean para agrupar varias filas en una cabecera (thead) un pie (tfoot) o una sección (tbody) de una tabla.<br></li> 
+		<br>
+		Sus atributos comunes son los b&aacute;sicos, internacionalizaci&oacute;n y de eventos.<br>
+		No tiene atributos propios.<br> 
+	</p>
+	
+</body>
+</html>

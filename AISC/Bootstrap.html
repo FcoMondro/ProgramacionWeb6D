@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Investigaci&oacute;n Bootstrap</title>
+	<style>
+		html
+		{
+			background-color: #ffccee;
+		}
+		#titulo
+		{
+			
+		}
+	</style>
+</head>
+<body>
+	<ul><h1>¿Qu&eacute; es Bootstrap?</h1></ul>
+	<p>
+		<ul>			
+			<h4>Origen</h4>
+			Bootstrap fue desarrollado por Mark Otto y Jacbod Thornton de Twitter, como un marco de trabajo (framework) para fomentar la consistencia a través de herramientas internas. Antes de Bootstrap, se usaban varias librerías para el desarrollo de interfaces de usuario, las cuales guiaban a inconsistencias y a una carga de trabajo alta en su mantenimiento.
+
+			<br><br>
+			Es el framework creado por Twitter el cual permite crear interfaces web con CSS y Javascript que adaptan la interfaz dependiendo del tamaño del dispositivo en el que se visualice de forma nativa, es decir, automáticamente se adapta al tamaño de un ordenador o de una Tablet sin que el usuario tenga que hacer nada, esto se denomina diseño adaptativo o Responsive Design.
+
+			<br><br>
+			El beneficio de usar responsive design en un sitio web, es principalmente que el sitio web se adapta automáticamente al dispositivo desde donde se acceda. Lo que se usa con más frecuencia es el uso de media queries, que es un módulo de CSS3 que permite la representación de contenido para adaptarse a condiciones como la resolución de la pantalla y si se trabajan las dimensiones del contenido en porcentajes, se puede tener una web muy fluida capaz de adaptarse a casi cualquier tamaño de forma automática. Otra muy buena opción si no se quiere tener nada que ver con queris es el uso del framework de Bootstrap.
+
+			<br><br>
+			El Framework trae varios elementos con estilos predefinidos fáciles de configurar: Botones, Menus desplegables, Formularios incluyendo todos sus elementos e integración jQuery para ofrecer ventanas y tooltips dinámicos.
+
+			<br><br>
+			Aun ofreciendo todas las posibilidades que ofrece Bootstrap a la hora de crear interfaces web, los diseños creados con Bootstrap son simples, limpios e intuitivos, esto les da agilidad a la hora de cargar y al adaptarse a otros dispositivos.
+			
+			<br><br>
+			Claramente el mejor ejemplo de utilización de Bootstrap es Twitter, pero existen otros sitios que implementan diseños responsive basados en este Framework como por ejemplo:
+			<br><br>
+
+			<li>Breezi</li>
+			<li>Stackideas</li>
+			<li>iAcquire</li>
+			<li>AudioMack</li>
+			<li>LearnDot</li>
+
+			<br>			
+			Existen muchos más sitios creados con Bootstrap, quizás donde más se les nota además de en el diseño responsive es en los botones.
+
+			<br><br>
+			Bootstrap tiene un soporte relativamente incompleto para HTML5 y CSS 3, pero es compatible con la mayoría de los navegadores web. La información básica de compatibilidad de sitios web o aplicaciones esta disponible para todos los dispositivos y navegadores. Existe un concepto de compatibilidad parcial que hace disponible la información básica de un sitio web para todos los dispositivos y navegadores. 
+
+			<br><br>
+			Desde la versión 2.0 también soporta diseños sensibles. Esto significa que el diseño gráfico de la página se ajusta dinámicamente, tomando en cuenta las características del dispositivo usado (Computadoras, tabletas, teléfonos móviles).
+		</ul>
+	</p>
+
+	<ul><h2>Contenidos de Bootsstrap</h2></ul>
+	<p>
+		<ul>
+			Se puede descargar de dos maneras, compilado o mediante el código fiente original.
+			<br>
+
+
+			<h4>Contenidos de la versión compilada de Bootstrap</h4>
+			Después de descomprimir el archivo que se ha descargado con la versión compilada de Bootstrap, se verá la siguiente estructura de archivos y directorios:<br><br>
+			bootstrap/<br>
+			├── css/<br>
+			│   ├── bootstrap.css<br>
+			│   ├── bootstrap.min.css<br>
+			│   ├── bootstrap-theme.css<br>
+			│   └── bootstrap-theme.min.css<br>
+			├── js/<br>
+			│   ├── bootstrap.js<br>
+			│   └── bootstrap.min.js<br>
+			└── fonts/<br>
+			    ├── glyphicons-halflings-regular.eot<br>
+			    ├── glyphicons-halflings-regular.svg<br>
+			    ├── glyphicons-halflings-regular.ttf<br>
+			    └── glyphicons-halflings-regular.woff
+			    <br><br>
+			    Estos archivos son la forma más sencilla de utilizar Bootstrap en cualquier proyecto web. Para cada archivo se ofrecen dos variantes: los archivos compilados (cuyo nombre es bootstrap.*) y los archivos compilados + comprimidos (cuyo nombre es bootstrap.min.*). También se incluyen las fuentes de los iconos del proyecto Glyphicons y el tema opcional de Bootstrap.<br>
+
+
+			    <h4>Contenidos de la versión original de Bootstrap</h4>
+			    La versión original de Bootstrap incluye, además de las versiones compiladas de los archivos CSS y JavaScript, las versiones originales de esos mismos archivos y toda la documentación. Tras descomprimir el archivo que te has descargado con la versión original de Bootstrap, verás la siguiente estructura de archivos y directorios:<br><br>
+			    bootstrap/<br>
+				├── less/<br>
+				├── js/<br>
+				├── fonts/<br>
+				├── dist/<br>
+				│   ├── css/<br>
+				│   ├── js/<br>
+				│   └── fonts/<br>
+				└── docs/<br>
+				    └── examples/<br><br>
+				Los directorios less/, js/ y fonts/ contienen el código fuente utilizado para generar los archivos CSS, JavaScript y las fuentes. El directorio dist/ contiene los mismos archivos que se han mostrado en la sección anterior para la versión compilada de Bootstrap. El direcotrio docs/ incluye el código fuente de la documentación de Bootstrap y un directorio llamado examples/ con varios ejemplos de uso. El resto de archivos están relacionados con otros temas secundarios, como por ejemplo las licencias del código.<br>
+		</ul>
+	</p>
+
+	<ul><h2>Estructura y Funci&oacute;n</h2></ul>
+	<p>
+		<ul>
+			Bootstrap es modular y consiste esencialmente en una serie de hojas de estilo LESS que implementan la variedad de componentes de la herramienta. Una hoja de estilo llamada bootstrap.less incluye los componentes de las hojas de estilo. Los desarrolladores pueden adaptar el mismo archivo de Bootstrap, seleccionando los componentes que deseen usar en su proyecto. Los ajustes son posibles en una medida limitada a través de una hoja de estilo de configuración central. Los cambios más profundos son posibles mediante las declaraciones LESS. El uso del lenguaje de hojas de estilo LESS permite el uso de variables, funciones y operadores, selectores anidados, así como clases mixin. Desde la versión 2.0, la configuración de Bootstrap también tiene una opción especial de "Personalizar" en la documentación.<br>
+			<h4>Uso</h4>
+			Para usar Bootstrap en una página HTML, el desarrollador solo debe descargar la hoja de estilo Bootstrap CSS y enlazarla en el archivo HTML. (También pueden compilar el archivo CSS desde la hoja de estilo LESS descargada. Esto puede realizarse con un compilador especial.) Si el desarrollador también quiere usar los componentes de JavaScript, éstos deben estar referenciados junto con la librería jQuery en el documento HTML.<br>
+			<h4>Sistema de cuadrilla y diseño sensible</h4>
+			Bootstrap viene con una disposición de cuadrilla estándar de 940 píxeles de ancho. Alternativamente, el desarrollador puede usar un diseño de ancho-variable. Para ambos casos, la herramienta tiene cuatro variaciones para hacer uso de distintas resoluciones y tipos de dispositivos: teléfonos móviles, formato de retrato y paisaje, tabletas y computadoras con baja y alta resolución (pantalla ancha). Esto ajusta el ancho de las columnas automáticamente.<br>
+			<h4>Componentes re-usables</h4>
+			En adición a los elementos regulares de HTML, Bootstrap contiene otra interfaz de elementos comúnmente usados. Ésta incluye botones con características avanzadas (e.g grupo de botones o botones con opción de menú desplegable, listas de navegación, etiquetas horizontales y verticales, ruta de navegación, paginación, etc.), etiquetas, capacidades avanzadas de miniaturas tipográficas, formatos para mensajes de alerta y barras de progreso.<br>
+		</ul>
+	</p>
+
+	<!--Amayelli Itzel Silva Contreras 6ºD-->
+</body>
+</html>

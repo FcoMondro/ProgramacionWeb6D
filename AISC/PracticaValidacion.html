@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<form action="" method="POST" role="form"> <!--Formulario para no dejar campos vacios-->
+		<input type = "text" required value = "">
+		<input type = "submit" value = "Submit"> 
+	</form>
+
+	<form><!--Formulario para valor minimo 2-->
+		<input id = "foo" type = "number" min = "2" value = "3">
+		<input id = "bar" type = "number" min = "2" value = "1">
+		<input type = "submit" value = "Submit">  
+	</form>
+
+	<form><!--Formulario para una cadena conformada por 4 digitos-->
+		<input id = "foo" title = "Codigo postal debe inicial con 28." pattern = "^28[0-9]{3}$" value = "28989"> 
+		<input id = "bar" pattern = "[0-9]{4}$" value = "ABCD">
+		<input type = "submit" value = "Submit">
+	</form>
+
+	<form>
+		<input id = "foo" type = "url" value = "http://foo.com">
+		<input id = "bar" type = "url" value = "foo">
+		<input id = "foo2" type = "email" value = "foo@foo.com">
+		<input id = "bar2" type = "email" value = "bar">
+		<input type = "submit" value = "Submit"> 
+	</form>
+</body>
+</html>
