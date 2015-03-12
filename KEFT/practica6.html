@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validaciones</title>
+</head>
+<body>
+
+	<form>  <!-- Nombre -->
+	    <input title ="Solo caracteres" type="text" required value="" maxlength = "50" pattern="[a-zA-z]" />
+	    <input type="submit" value="Submit" />
+	</form>
+
+	<form>  <!-- Edad -->
+	    <input type="number" required value="" min = "18" max = "50"  />
+	    <input type="submit" value="Submit" />
+	</form>
+
+	<form>  <!-- Teléfono -->
+	    <input type="number" required value="" pattern = "^\([0-9]{1,3}\)[0-9]{3}\-[0-9]{4}$" />
+	    <input type="submit" value="Submit" />
+	</form>
+
+	<form>  <!-- CURP -->
+	    <input type="text" required value="" pattern="^[A-Z][AEIOUX][A-Z]{2}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1,2][0-9]|3[0,1])([H|M])(AS|BC|BS|CM|JC|MN)([B-D F-H J-N P-T V-Z]){3}[0-9]{2}$"/>
+	    <input type="submit" value="Submit" />
+	</form>
+
+	<form>  <!-- RFC -->
+	    <input type="text" required value="" pattern ="^([A-ZÑ]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Z|\d]{3})$"/>
+	    <input type="submit" value="Submit" />
+	</form>
+</body>
+<footer>Karen Stephanie Fletes Tejeda 6D</footer>
+</html>
