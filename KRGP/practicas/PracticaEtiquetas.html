@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tarea Listas y Tablas</title>
+</head>
+<body>
+	<h1>Listas</h1>
+	<h2>Listas no ordenadas</h2>
+	<p>Las listas no ordenadas van dentro de la etiqueta < ul > y de su cierre < /ul >. Cada punto que queramos añadir a la lista, lo haremos dentro de la etiqueta < li > y su cierre.<br>
+
+	Si no le indicamos nada a la etiqueta < li >, ésta se generará de forma automática. Pero si queremos definir nosotros mismo el símbolo del punto, podemos gracias al atributo “type”.<br>
+
+	Así podemos hacer que la lista esté definida por puntos negros (li type="disc"), por puntos con el fondo blanco (li type="circle") o por cuadrados (li type="square"). Aunque esta apariencia dependerá del navegador. Hay algunos navegadores que dan otras apariencias a estos mismos atributos.<br>
+	Vamos con un pequeño ejemplo en código:<br>
+
+	< ul ><br>
+	< li type="circle" >Esto es un tipo de punto.< /li ><br>
+	< li type="square" >Este es otro.< /li ><br>
+	< li type="disc" >Y este es otro diferente.< /li ><br>
+	< /ul ><br>
+	Cuyo resultado visual será el que veremos a continuación:
+	<ul>
+	<li type="circle">Esto es un tipo de punto.</li>
+	<li type="square">Este es otro.</li>
+	<li type="disc">Y este es otro diferente.</li>
+	</ul>
+	</p>
+
+	<h2>Listas ordenadas</h2>
+	<p>Las listas ordenadas van enmarcadas dentro de las etiquetas < ol > < /ol >. Cada punto de la lista se escribe con la misma etiqueta que en las no numeradas: < li >. Pero al ser listas ordenadas los símbolos serán números y éstos se irán generando automáticamente por orden, conforme escribamos nuevos puntos.<br>
+
+	En las listas ordenadas podemos hacer que el primer punto comience con el número que nosotros queramos. Lo conseguiremos gracias al atributo “value”. Los siguientes puntos que escribamos se generarán automáticamente por orden, partiendo de ese número.<br>
+	Por ejemplo, si queremos que nuestra lista empiece por el número 20, sólo deberemos escribir lo siguiente:<br>
+
+	< ol ><br>
+	< li value="20" >Este será el número 20. < /li ><br>
+	< li >Este será el 21. < /li ><br>
+	< li > Este será el 22. Y así sucesivamente. < /li ><br>
+	< /ol ><br>
+	Y el resultado será el siguiente:<br>
+	<ol>
+	<li value="20">Este será el número 20. </li>
+	<li>Este será el 21. </li>
+	<li> Este será el 22. Y así sucesivamente. </li>
+	</ol>
+	</p>
+
+	<h2>Listas de definiciones</h2>
+	<p>Si lo que vamos a hacer es un listado de definiciones, podemos usar las etiquetas < dl >, < dt > y < dd >. Vamos a explicarlas por partes:<br>
+
+	La etiqueta < dl > viene de los términos ingleses “Definiton list” y nos indica que dentro de ella, entre ella y su cierre, va a ir una definición.<br>
+
+	La etiqueta < dt > viene de los términos “Definition term” y dentro de ella irá el término que vamos a definir. Para entendernos mejor, dentro de < dt > iría el título de la definición.<br>
+
+	La etiqueta < dd > viene de los términos “Definition description” y nos dice que dentro de ésta irá la definición.<br>
+
+	Si escribimos varios listados de definición, éstas se separarán automáticamente entre ellas para facilitar su diferenciación.<br>
+	Aquí podemos ver un ejemplo de código de dos listado de definición:
+
+	< dl ><br>
+	< dt >Aquí va el término que definiremos< /dt ><br>
+	< dd >Y aquí dentro irá la definición propiamente dicha.< /dd ><br>
+	< /dl ><br>
+	< dl ><br>
+	< dt >Aquí va la segunda definición< /dt ><br>
+	< dd >Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.< /dd ><br>
+	< /dl ><br>
+	Cuyo resultado será el siguiente:<br>
+	<dl>
+	<dt>Aquí va el término que definiremos</dt>
+	<dd>Y aquí dentro irá la definición propiamente dicha.</dd>
+	</dl>
+	<dl>
+	<dt>Aquí va la segunda definición</dt>
+	<dd>Y aquí dentro irá la segunda definición, separada automáticamente de la anterior.</dd>
+	</dl>
+	<p>
+	<h2>Atributos de listas</h2>
+	<p>
+	type  =  información de estilo [CI]<br>
+	Desaprobado. Este atributo especifica el estilo de un objeto de lista. Los valores disponibles son para los agentes de usuario visuales. Los valores posibles se describen más abajo (junto con la información sobre las diferencias entre mayúsculas y minúsculas).<br>
+	start = number [CN]<br>
+	Desaprobado. Sólo para OL. Este atributo especifica el número del primer objeto de una lista ordenada. El número inicial por defecto es el "1". Obsérvese que si bien el valor de este atributo es un entero, el rótulo correspondiente puede no ser numérico. Así, por ejemplo, cuando el estilo de objeto de lista es de letras latinas mayúsculas (A, B, C, ...), start=3 significa "C". Cuando el estilo es de numerales romanos en minúsculas, start=3 significa "iii", etc.<br>
+	value = number [CN]<br>
+	Desaprobado. Sólo para LI. Este atributo establece el número del objeto de lista actual. Obsérvese que si bien el valor de este atributo es un entero, el rótulo correspondiente puede no ser numérico (véase el atributo start).<br>
+	compact [CI]<br>
+	Desaprobado. Si está establecido, este atributo booleano indica a los agentes de usuario visuales que representen la lista de un modo más compacto. La interpretación de este atributo depende del agente de usuario.<br>
+	<p>
+		<h1>Tablas</h1>
+		<p>
+			Una tabla en html viene marcada por las etiquetas < table > < /table >. Entre esas dos etiquetas definiremos la tabla, las celdas que queremos, las columnas y las características de cada uno de estos parámetros. Pero vamos a empezar explicándote la etiqueta < table >.<br>
+
+			Ya hemos dicho que esta etiqueta nos indica que empieza una tabla, pero… ¿podemos predefinir  características de esa tabla? Por supuesto que sí. Una tabla admite muchos parámetros. Nosotros vamos a explicarte los principales.<br>
+		</p>
+		<h2>Las Tablas < table ></h2>
+		<p>
+			Como ya ocurre con la etiqueta body, a una tabla también lo podemos definir el fondo de la misma. Esto lo podemos conseguir con el parámetro "bgcolor", que nos pondrá un color de fondo,  o "background" para poner una imagen de fondo. Recuerda que si la imagen es más pequeña que la tabla, ésta se repetirá tanto a lo ancho como a lo largo.<br>
+
+			Otro aspecto que podemos definir de la tabla es el borde. Esto lo haremos con el parámetro "border". Como en todas los parámetros que ya hemos visto escribiremos: border= "x" siendo la x un número. Ese número indicará el grosor del borde. Si no ponemos borde o lo escribimos "0", la tabla no mostrará borde ninguno. Por supuesto, también podemos darle color al borde, escribiendo la etiqueta "bordercolor" e indicando el color que queramos para nuestro borde.<br>
+
+			El parámetro "width" indircará la anchura de la tabla. Esta anchura la podemos poner en píxeles (width= "300") o con porcentaje (width= "100%").<br>
+
+			Dos parámetros más son cellspacing (que define el espacio entre las celdas de la tabla) y cellpadding  (que le marca a la tabla el espacio que debe dejar alrededor del texto dentro de una celda).<br>
+
+			Como ejemplo, escribiremos el hipotético supuesto de querer una tabla que sea ancha al 100%, con un borde azul de un píxel de grosor y con un cellpadding de 10 y con un cellspacing de 10. El código quedaría de la siguiente forma.<br>
+			< table width="100%" border="1" bordercolor="#0000FF" cellspacing="10" cellpadding="10" >< /table ><br>
+            </p>
+			asi seria como se veria al final.<br>
+			<table width="100%" border="1" bordercolor="#0000FF" cellspacing="10" cellpadding="10"></table><br>
+			<h2>Las filas < tr ></h2>
+			<p>
+			Como hemos visto en el encabezado las filas se escriben gracias a las etiquetas < tr > con su correspondiente cierre < /tr >. El contenido de las columnas que están dentro de la fila lo podemos alínear tanto horizontal como verticalmente.<br>
+
+			Para alinearlo verticalmente utilizaremos el atributo "valign" para poder alinearlo arriba de la celda ("top"), en el centro ("middle") o debajo ("bottom").<br>
+
+			Para alinearlo horizontalmente utilizaremos el atributo "align". Con este atributo podremos alinear el contenido de las celdas en el centro ("center"), a la izquierda ("left"), a la derecha ("right") o justificado ("justify").<br>
+
+			Por supuesto a las filas también les podemos definir el color de fondo ("bgcolor") y el color del borde ("bordercolor").<br>
+			<h2>Las celdas < td ></h2>
+			<p>
+			Las celdas que van dentro de cada fila las tenemos que escribirlas con la etiqueta < td > y su correspondiente cierre < /td >.<br>
+
+			Al igual que en las filas, en las celdas podemos definir el la alineación del contenido que está dentro con los atributos "valign" y "align".<br>
+
+			Las celdas poseen unos atributos que nos ayudan a poder agrupar tantas celdas o tantas columnas como indiquemos en él. Para agrupar celdas utilizaríamos el atributo "colspan" y para agrupar celdas el atributo "rowspan".<br>
+			</p>
+		</p>
+</body>
+</html>
