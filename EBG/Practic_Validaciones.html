@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Title Page</title>
-
 		<!-- Bootstrap CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -15,13 +14,23 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<style>
+			.input{
+				background-color: #FF0000;
+			}
+			.error{
+				background-color: red;
+			}
+			.success{
+				background-color: blue;
+			}
+		</style>
 	</head>
 	<body>
 		<h1 class="text-center">Datos personales</h1>
 		<div class="container well">
 			<form action="" method="POST" role="form">
 				<legend>Datos</legend>
-			
 				<div class="form-group">
 					<label for="">Nombre</label>
 					<input type="text" class="form-control" id="nombre" maxlength="50" required placeholder="Nombre">
@@ -34,8 +43,12 @@
 					<label for="">RFC</label>
 					<input type="text" class="form-control" id="rfc" pattern="^([A-ZÑ]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|[1,2][0-9]|3[0,1])[A-Z|\d]{3})$" placeholder="XXXX0000XXX">
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button oncclick="" type="submit" class="btn btn-primary">Submit</button>
+			</fomr>
 		</div>
+		<script type="text/javascript">
+
+		</script>
 		<!-- jQuery -->
 		<script src="js/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
