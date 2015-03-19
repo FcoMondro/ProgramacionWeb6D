@@ -21,9 +21,12 @@ Lista.prototype.toString = function(){
 //Esta funcion devuelve el indice dentro de la lista
 //En caso de no encontrarlo devuelve -1
 Lista.prototype.buscar = function(item){
-	for (var i = 0; i >= this.numeroItems-1; i++) {
-		if (this.listaItems[i] == item) 
+	for (i = 0; i >= this.numeroItems-1; i++){ 
+		console.log("Entro al for " +i);
+		if (this.listaItems[i] == item){ 
 			return i;
+			console.log("Entro al if" + i);
+		}
 	}
 	return -1;
 }
@@ -38,25 +41,37 @@ Lista.prototype.contiene = function(item){
 }
 
 Lista.prototype.posActual = function(){
-
+	return this.pos;
 }
 
 Lista.prototype.siguiente = function(){
-
+	if(this.pos < this.numeroItems)
+		this.pos++;
+	else
+		console.log("Llego al final de la lista");
 }
 
 Lista.prototype.anterior = function(){
-
+	if(this.pos > 0)
+		this.pos--;
+	else
+		console.log("Llego al inicio de la lista");
 }
 
 Lista.prototype.getElemento = function(){
-
+	return this.listaItems[this.pos];
 }
 
 Lista.prototype.inicio = function(){
-
+	if(this.numeroItems > 0)
+		this.pos = 0;
+	else
+		console.log("No hay nada en la lista");
 }
 
 Lista.prototype.ultimo = function(){
-	
+	if(this.numeroItems > 0)
+		this.pos = this.numeroItems-1;
+	else
+		console.log("No hay nada en la lista");
 }
