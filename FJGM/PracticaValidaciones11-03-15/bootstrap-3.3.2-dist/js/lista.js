@@ -14,6 +14,16 @@ Lista.prototype.agregar = function(item){
 	this.listaItems[this.numeroItems++] = item;
 }
 
+Lista.prototype.eliminar = function(item){
+	var index = this.buscar(item);
+	if(index>-1){
+		this.listaItems.splice(index,1);
+		--this.numeroItems;
+		return true;
+	}
+	return false;
+}
+
 Lista.prototype.toString = function(){
 	console.log(this.listaItems);
 }
@@ -21,12 +31,9 @@ Lista.prototype.toString = function(){
 //Esta funcion devuelve el indice dentro de la lista
 //En caso de no encontrarlo devuelve -1
 Lista.prototype.buscar = function(item){
-	for (i = 0; i >= this.numeroItems-1; i++){ 
-		console.log("Entro al for " +i);
-		if (this.listaItems[i] == item){ 
+	for (var i = 0; i <= this.numeroItems-1; i++){ 
+		if (this.listaItems[i] == item)
 			return i;
-			console.log("Entro al if" + i);
-		}
 	}
 	return -1;
 }
@@ -74,4 +81,13 @@ Lista.prototype.ultimo = function(){
 		this.pos = this.numeroItems-1;
 	else
 		console.log("No hay nada en la lista");
+}
+
+Lista.prototype.movermeA = function(index){
+	if (index >= 0 && index < this.numeroItems-1)
+		this.pos = index;
+}
+
+Lista.prototype.dibujar = function(idBody){
+	
 }

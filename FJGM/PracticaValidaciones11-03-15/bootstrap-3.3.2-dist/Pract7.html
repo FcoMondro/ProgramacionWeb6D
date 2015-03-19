@@ -24,12 +24,12 @@
 			<form action="" method="POST" role="form">
 				<legend>Tarea</legend>					
 				<div class="form-group">
-					<input type="text" class="form-control" id="" placeholder="¿Qué falta por hacer?">
+					<input type="text" class="form-control" id="iTarea" placeholder="¿Qué falta por hacer?">
 				</div>
-				<button type="submit" class="btn btn-primary">Agregar</button>
+				<button onclick="return agregarTarea()" type="submit" class="btn btn-primary">Agregar</button>
 			</form>
 
-			<table class="table">
+			<table class="table" id="tTareas">
 				<thread>
 					<tr>
 						<th>Descripción</th>
@@ -43,7 +43,6 @@
 					</tr>
 					<tr>
 						<td>TODO dos</td>
-						<td></td>
 					</tr>
 				</tbody>
 			</table>
@@ -54,6 +53,22 @@
 				<script src="js/bootstrap.min.js"></script>
 				<!-- List JavaScript -->
 				<script src="js/lista.js"></script>
+
+				<script>
+					var listaTareas = new Lista();
+
+					var nuevaTarea = document.getElementById("iTarea");
+					var tabla = document.getElementById("tTareas");
+
+					function agregarTarea(){
+						if(!listaTareas.contiene(nuevaTarea.value))
+							listaTareas.agregar(nuevaTarea.value);
+
+						nuevaTarea.value="";
+
+						return false;
+					}
+				</script>
 		</div>
 	</body>
 </html>
