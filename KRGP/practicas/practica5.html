@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="container">
+			<form action="" method="POST" role="form">
+				<legend>Form 1</legend>
+			
+				<div class="form-group">
+					<label for="">label</label>
+					<input type="text" class="form-control" id="" placeholder="Input field" required value="">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<form action="" method="POST" role="form">
+				<legend>Form 2</legend>
+			
+				<div class="form-group">
+					<label for="">label</label>
+					<input type="number" class="form-control" id="foo" placeholder="Input field" min="2" value="3">
+					<input type="number" class="form-control" id="bar" placeholder="Input field" min="2" value="1">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<form action="" method="POST" role="form">
+				<legend>Form 3</legend>
+			
+				<div class="form-group">
+					<label for="">label</label>
+					<input type="text" class="form-control" id="foo" placeholder="Input field" title="Codigo postal debe iniciar con 28" pattern="^28[0-9]{3}$" value="28989">
+					<input type="text" class="form-control" id="bar" placeholder="Input field" pattern="[0-9]{4}" value="ABCD">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+			<form action="" method="POST" role="form">
+				<legend>Form 4</legend>
+			
+				<div class="form-group">
+					<label for="">label</label>
+					<input type="url" class="form-control" id="foo" placeholder="Input field" value="http://foo.com">
+					<input type="url" class="form-control" id="bar" placeholder="Input field" value="foo">
+					<input type="email" class="form-control" id="foo2" placeholder="Input field" pattern="$ucol.mx"value="foo@foo.com">
+					<input type="email" class="form-control" id="bar2" placeholder="Input field" value="bar">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+		<script src="js/jquery.js"></script>
+
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
