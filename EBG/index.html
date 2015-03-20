@@ -17,15 +17,15 @@
 		<![endif]-->
 	</head>
 	<body>
-		<h1 class="text-center">Listas JS</h1>
+		<h1 class="text-center">Listas de Tareas JS</h1>
 		<div class="container well">
 			<form action="" method="POST" role="form">
 				<legend>Tarea</legend>
 			
 				<div class="form-group">
-					<input type="text" class="form-control" id="" placeholder="¿Qué falta por hacer?">
+					<input type="text" class="form-control" id="iTarea" placeholder="¿Qué falta por hacer?">
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button onclick="return agregarTarea()" type="submit" class="btn btn-primary">Agregar</button>
 			</form>
 			<table class="table table-hover">
 				<thead>
@@ -34,13 +34,7 @@
 						<th>Terminado</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td>TODO uno</td>
-					</tr>
-					<tr>
-						<td>TODO dos</td>
-					</tr>
+				<tbody id="isBody">
 				</tbody>
 			</table>
 		</div>
@@ -49,5 +43,22 @@
 		<!-- Bootstrap JavaScript -->
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/lista.js"></script>
+		<script >
+			var listaTareas = new Lista();
+			var tarea = document.getElementById("iTarea");
+			var tbody = document.getElementById("isBody");
+			listaTareas.toString();
+			function agregarTarea()
+			{
+				if(!listaTareas.contiene(tarea.value) && tarea.value!="")
+				{
+					listaTareas.agregar(tarea.value);
+					listaTareas.dibujar(tbody);
+					tarea.value="";
+					listaTareas.toString();
+				}
+				return false;
+			}
+		</script>
 	</body>
 </html>

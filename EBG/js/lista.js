@@ -54,6 +54,18 @@ Lista.prototype.siguiente = function()
 	else
 		console.log("No puedes seguir mas");
 }
+Lista.prototype.eliminar = function(item)
+{
+	var index = this.buscar(item);
+	if(index>-1)
+	{
+		this.listaItems.splice(index,1);
+		--this.numeroItems;
+		return true;
+	}
+	return	false;
+	
+}
 Lista.prototype.anterior = function()
 {
 	if(this.pos<this.numeroItems && this.pos>0)
@@ -61,15 +73,30 @@ Lista.prototype.anterior = function()
 	else
 		console.log("No puedes retroceder mas");
 }
-Lista.prototype.getElemento = function()
+Lista.prototype.getItem = function()
 {
 	console.log(this.listaItems[this.pos]);
 }
 Lista.prototype.inicio = function()
 {
-	console.log(this.listaItems[0]);
+	this.pos=0;
 }
 Lista.prototype.ultimo = function()
 {
-	console.log(this.listaItems[this.numeroItems-1]);
+	thi.pos = this.numeroItems-1;
+}
+Lista.prototype.moverA = function(index)
+{
+	if(index >=0 && index<this.listaItems-1)
+		this.pos = index;
+}
+Lista.prototype.dibujar = function(isBody)
+{
+	var ele = document.getElementById("isBody");
+	var tr = document.createElement('tr');
+	ele.appendChild(tr);
+	var td = document.createElement('td');
+	tr.appendChild(td);
+	var txt = document.createTextNode(this.listaItems[this.numeroItems-1]);
+	td.appendChild(txt);
 }
