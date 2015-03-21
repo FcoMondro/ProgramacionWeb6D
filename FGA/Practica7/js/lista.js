@@ -43,16 +43,20 @@ Lista.prototype.posActual = function(){
 }
 
 Lista.prototype.siguiente = function(){
+	
 	if(this.pos+1 > this.numItems-1)
 	{
 		this.pos=0;
-		return this.listaItems[this.pos];
+
+		//return this.listaItems[this.pos];
 	}
+		
 	else
 	{
 		this.pos++;
-		return this.listaItems[this.pos];
+		//return this.listaItems[this.pos];
 	}
+		
 }
 
 Lista.prototype.anterior = function(){
@@ -68,14 +72,47 @@ Lista.prototype.anterior = function(){
 	}
 }
 
-Lista.prototype.getElemento = function(posItem){
-	return this.listaItems[posItem];
+Lista.prototype.getElemento = function(){
+	return this.listaItems[this.pos];
 }
 
 Lista.prototype.inicio = function(){
-	return this.listaItems[0];
+	this.pos=0;
+	//return this.listaItems[0];
 }
 
 Lista.prototype.ultimo =function(){
-	return this.listaItems[this.numItems-1];
+	this.pos=this.numItems-1;
+	//return this.pos = this.numItems-1;
 }
+
+Lista.prototype.eliminar = function(item){
+	var index = this.buscar(item);
+	if(index > -1){
+		this.listaItems.splice(index,1);
+		--this.numItems;
+		return true;
+	}
+	return false;
+}
+
+Lista.prototype.moverA = function(index){
+	if(index > -1 && index < this.numItems-1){
+           this.pos = index;
+	}
+}
+
+Lista.prototype.dibujar =  function(tbody){
+
+		var fila = document.createElement("tr");
+		var celda = document.createElement("td");
+		var celda2= document.createElement("td");
+		var tarea = document.createTextNode(this.getElemento());
+		celda.appendChild(tarea);
+		fila.appendChild(celda);
+		fila.appendChild(celda2);
+		this.pos++;
+		
+		tbody.appendChild(fila);
+}
+
