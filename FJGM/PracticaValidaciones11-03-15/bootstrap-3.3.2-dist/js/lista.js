@@ -89,5 +89,11 @@ Lista.prototype.movermeA = function(index){
 }
 
 Lista.prototype.dibujar = function(idBody){
-	
+	var ele = document.getElementById("tTareas");
+	var tr = document.createElement('tr');
+	ele.appendChild(tr);
+	var td = document.createElement('td');
+	tr.appendChild(td);
+	var txt = document.createTextNode(this.listaItems[this.numeroItems-1]);
+	td.appendChild(txt);
 }

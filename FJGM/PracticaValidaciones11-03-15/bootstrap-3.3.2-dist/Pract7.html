@@ -36,13 +36,7 @@
 						<th>Terminado</th>
 					</tr>
 				</thread>
-				<tbody>
-					<tr>
-						<td>TODO Uno</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>TODO dos</td>
+				<tbody id="tTareas">
 					</tr>
 				</tbody>
 			</table>
@@ -61,11 +55,13 @@
 					var tabla = document.getElementById("tTareas");
 
 					function agregarTarea(){
-						if(!listaTareas.contiene(nuevaTarea.value))
+						if(!listaTareas.contiene(nuevaTarea.value)){
 							listaTareas.agregar(nuevaTarea.value);
-
-						nuevaTarea.value="";
-
+							listaTareas.dibujar(tabla);
+							nuevaTarea.value="";
+							listaTareas.toString();
+						}
+						
 						return false;
 					}
 				</script>
