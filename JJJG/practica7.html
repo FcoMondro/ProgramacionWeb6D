@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Listas JS</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h1 class="text-center">Listas JS</h1>
+		<div class="container">
+
+			<form action="" method="POST" role="form">
+				<legend>Tarea</legend>
+				
+				<div class="form-group">
+					
+					<input type="text" class="form-control" id="tarellilla" placeholder="¿Qué falta por hacer?">
+				</div>
+
+
+				<div id="oculto" class="alert alert-success" style="display:none;">Tu tarea ha sido agregada correctamente.</div>
+
+				<button type="submit" onclick="return agregarTarea()" class="btn btn-primary">Ingresar</button>
+			</form>
+
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Descripcion</th>
+						<th>Terminado</th>
+					</tr>
+				</thead>
+				<tbody id="tablebody">
+					<tr>
+					</tr>
+					
+				</tbody>
+			</table>
+				
+			
+		
+
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/lista.js"></script>
+		<script>
+			var listaTareas = new Lista();
+			listaTareas.agregar("Tarea 1");
+			listaTareas.agregar("Tarea 2");
+			listaTareas.agregar("Tarea 3");
+			listaTareas.toString();
+			var tarea = document.getElementById("tarellilla");
+			var tablebody = document.getElementById("tablebody");
+
+			function agregarTarea(){
+				if(!listaTareas.contiene(tarea.value)){
+					listaTareas.agregar(tarea.value);
+					listaTareas.dibujar(tablebody);
+					tarea.value="";
+					//while(listaTareas)
+
+					//$("#imprime").text(tarea.value);
+					//console.log(tarea);
+					tarea.value="";
+					listaTareas.toString();
+					//document.getElementById('imprime').firstChild.nodeValue ="<td>"+tarea.value+"</td>";
+
+					//document.getElementById('imprime').innerHTML="<td>"+tarea.value+"</td>";
+					//document.getElementById('oculto').style.display = 'block'; 
+					alert("Ingresado");	
+					}	
+
+					return false;
+
+			}
+
+
+		</script>
+	</body>
+</html>
