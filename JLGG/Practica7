@@ -1,0 +1,129 @@
+function Lista(){
+	this.listaItems = [];
+	this.pos = 0;
+	this.numeroItems = 0;
+}
+
+/*
+*Esta función elimina todos los elementos de la lista
+*/
+Lista.prototype.clear = function(){
+	this.listaItems = [];
+	this.numeroItems = this.pos = 0;
+}
+
+/*
+*Esta función agrega el elemento item al final de la lista
+*/
+Lista.prototype.agregar = function(item){
+	this.listaItems[this.numeroItems++] = item;
+}
+
+/*
+*Esta función agrega el elemento item al final de la lista
+*/
+Lista.prototype.eliminar = function(item){
+	var index = this.buscar(item);
+		if(index > -1){
+			this.listaItems.spice(index,1);
+			--this.numeroItems;
+			return true;
+		} 
+	
+}
+
+/*
+*Esta función manda una cadena a la consola de todos los elementos de la lista
+*/
+Lista.prototype.toString = function(){
+	console.log(this.listaItems);
+}
+/*
+*Esta función devuelve el indice dentro de la lista
+*en caso de no encontrarlo devuelve -1
+*/
+Lista.prototype.buscar = function(item){
+	for (var i=0; i< this.numeroItems-1; i++) {
+		if(this.listaItems[i]==item)
+			return i;
+	}
+	return -1;
+}
+
+/*
+*Regresa un valor boolean true, si la lista contiene el item,
+*en caso contrario regresa false
+*/
+Lista.prototype.contiene = function (item) {
+	var index=this.buscar(item);
+	if(index >=0)
+		return true;
+	return false;
+}
+
+/*
+*Muestra el elemento actual
+*/
+Lista.prototype.posActual = function(){
+	console.log(this.pos);
+}
+
+/*
+*Avanaza al siguiente elemento desde la posici{on actual
+*/
+Lista.prototype.siguiente = function(){
+	if(this.listaItems[this.posActual++] != null) 
+		this.posActual++;
+}
+
+/*
+*Regresa un valor boolean true, si la lista contiene el item,
+*en caso contrario regresa false
+*/
+Lista.prototype.anterior = function(){
+	if(this.pos > 0) 
+		return --this.pos;
+	else 
+		console.log("Desbordamiento!");
+}
+
+/*
+*Mueve la posición actual al inicio 
+*/
+Lista.prototype.inicio = function(){
+	this.pos = 0; 
+}
+
+/*
+* Mueve la posición actual al final
+*/
+Lista.prototype.ultimo = function(){
+	this.pos = this.numeroItems - 1; 
+}
+
+/*
+*Muestra el elemento actual
+*/
+Lista.prototype.getElemento = function(){
+	return this.listaItems[this.pos];
+}
+
+/*
+*Me mueve a la posición que yo quiero
+*/
+Lista.prototype.moverA = function(index){
+	if(index >=0 && index <this.listaItems-1)
+		this.pos=index;
+}
+
+/*
+*Dibuja
+*/
+Lista.prototype.dibujar = function(idBody){
+	var tr = document.createElement('tr');
+	ele.appendChild(tr);
+	var td = document.createElement('td');
+	tr.appendChild(td);
+	
+	var txt = document.createTextNode(this.listaItems[this.numeroItems-1]);
+}
