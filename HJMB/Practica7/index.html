@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Practica 7</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<h1 class="text-center">Listas JS</h1>
+		<div class="container">
+			<form action="" method="POST" role="form">
+				<legend>Tarea</legend>
+			
+				<div class="form-group">
+					<input type="text" class="form-control" id="iTarea" placeholder="¿Hola que hace?">
+				</div>				
+				<button onClick=" return agregarTarea()" type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Descripcion</th>
+						<th>Terminado</th>
+					</tr>
+				</thead>
+				<tbody id="idBody">
+				</tbody>
+			</table>
+		</div>
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="lista.js"></script>
+		<script>
+			var listaTareas= new Lista();
+			listaTareas.agregar("Tarea 1");
+			listaTareas.agregar("Tarea 2");
+			listaTareas.agregar("Tarea 3");
+			listaTareas.toString();
+
+			var tarea = document.getElementById("iTarea");
+			var tbody = document.getElementById("idBody");
+
+			function agregarTarea(){
+				if(!listaTareas.contiene(tarea.value) && tarea.value!="")
+				{
+					listaTareas.agregar(tarea.value);
+					listaTareas.dibujar(tbody);
+					tarea.value="";
+				}	
+				listaTareas.toString();			
+				return false;
+			}
+		</script>
+	</body>
+</html>
