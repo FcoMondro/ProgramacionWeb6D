@@ -45,13 +45,14 @@ Lista.prototype.siguiente = function(){
 	if(this.pos+1 > this.numItems-1)
 	{
 		this.pos=0;
-		return this.listaItems[this.pos];
+
+		//return this.listaItems[this.pos];
 	}
 		
 	else
 	{
 		this.pos++;
-		return this.listaItems[this.pos];
+		//return this.listaItems[this.pos];
 	}
 		
 }
@@ -61,30 +62,66 @@ Lista.prototype.anterior = function(){
 	if(this.pos-1 < 0)
 	{
 		this.pos=this.numItems-1;
-		return this.listaItems[this.pos];
+		//return this.listaItems[this.pos];
 	}
 		
 	else
 	{
 		this.pos--;
-		return this.listaItems[this.pos];
+		//return this.listaItems[this.pos];
 	}
 
 }
 
-Lista.prototype.getElemento = function(posItem){
+Lista.prototype.getElemento = function(){
 
-	return this.listaItems[posItem];
+	return this.listaItems[this.pos];
 }
 
 
 Lista.prototype.inicio = function(){
+	this.pos=0;
 
-	return this.listaItems[0];
+	
+	//return this.listaItems[this.pos];
+	
 }
 
 Lista.prototype.ultimo = function(){
+	this.pos=this.numItems-1;
 
-	return this.listaItems[this.numItems-1];
+	//return this.listaItems[this.pos];
+	
+}
+
+Lista.prototype.eliminar = function(item){
+
+	var index = this.buscar(item);
+	if(index > -1)
+	{
+		this.listaItems.splice(index,1);
+		--this.numItems;
+	}	
+	return false;
+}
+
+Lista.prototype.moverA = function(index){
+	if(index >= 0 && index < this.numItems-1)
+		this.pos=index;	
+}
+
+
+Lista.prototype.dibujar =  function(body){
+
+		var fila = document.createElement("tr");
+		var celda = document.createElement("td");
+		var celda2= document.createElement("td");
+		var tarea = document.createTextNode(this.getElemento());
+		celda.appendChild(tarea);
+		fila.appendChild(celda);
+		fila.appendChild(celda2);
+		this.pos++;
+		
+		body.appendChild(fila);
 }
 
