@@ -1,8 +1,4 @@
-<?php
-	$nombre = $_POST['iNombre'];
-	$domicilio = $_POST['iDomicilio'];
-	$telefono = $_POST['iPhone'];
-?>
+
 
 <!DOCTYPE html>
 <html lang="">
@@ -23,6 +19,11 @@
 		<![endif]-->
 	</head>
 	<body>
+		<?php
+			$nombre = $_POST['iNombre'];
+			$domicilio = $_POST['iDomicilio'];
+			$telefono = $_POST['iPhone'];
+		?>
 		<div class="container">
 			<form action="datos.php" method="POST" role="form">
 				<h1 class="text-center">Datos</h1>
