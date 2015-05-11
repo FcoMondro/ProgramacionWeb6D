@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Ajax</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<h1 class="text-center">Hello Ajax</h1>
+
+		<div class="container well">
+			<form action="" method="POST" role="form">
+			<legend>Ejemplo ajax</legend>
+		
+			<div class="form-group">
+				<label for="">Ciudad</label>
+				<input type="text" class="form-control" id="city" name="city" placeholder="Input field">
+			</div>
+		
+			<button type="button" class="btn btn-primary" onclick = "peticionAjax()">Submit</button>
+		</form>
+		</div>
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<script>
+			function peticionAjax()
+			{
+				var iCiudad = $('#city');
+				var ciudad = iCiudad.val();
+
+				if(!ciudad)
+				{
+					iCiudad.parent().addClass('has-error');
+				}
+				else
+				{
+					iCiudad.parent().removeClass('has-error');
+
+					$.ajax({
+					url: 'https://maps.googleapis.com/maps/api/geocode/json',
+					type: 'GET',
+					dataType: 'json',
+					data: {address: ciudad},
+					})
+
+
+					.done(function(data) {
+						console.log(data);
+						if(data.status == 'OK')
+						{
+							$('.container').append('<p>'+ data.results[0].formatted_address +'Latitude:' + data.results[0].geometry.location.lat + 'Longitud:' + data.results[0].geometry.location.lng +'</p>')							
+						}
+					})
+
+					.fail(function() {
+						console.log("error");
+					})
+
+					.always(function() {
+						iCiudad.val('');
+					});
+				}				
+			}
+		</script>
+
+	</body>
+</html>
