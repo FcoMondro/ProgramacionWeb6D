@@ -41,15 +41,12 @@
 				else
 				{
 					iCiudad.parent().removeClass('has-error');
-
 					$.ajax({
 					url: 'https://maps.googleapis.com/maps/api/geocode/json',
 					type: 'GET',
 					dataType: 'json',
 					data: {address: ciudad},
 					})
-
-
 					.done(function(data) {
 						console.log(data);
 						if(data.status == 'OK')
@@ -57,11 +54,9 @@
 							$('.container').append('<p>'+ data.results[0].formatted_address +'Latitude:' + data.results[0].geometry.location.lat + 'Longitud:' + data.results[0].geometry.location.lng +'</p>')							
 						}
 					})
-
 					.fail(function() {
 						console.log("error");
 					})
-
 					.always(function() {
 						iCiudad.val('');
 					});
