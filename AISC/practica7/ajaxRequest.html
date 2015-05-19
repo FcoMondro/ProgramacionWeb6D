@@ -1,37 +1,53 @@
 <!DOCTYPE html>
-<html lang="">
-	<head>
-		<meta charset="utf-8">
+<html lang="es">
+  <head>
+   		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Ajax</title>
+		<title>PRACTICA AJAX</title>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      #map-canvas {
+        height: 400px;
+        width: 95%;
+      }
+    </style>
 
-	</head>
-	<body>
-		<h1 class="text-center">Hello Ajax</h1>
 
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  </head>
+  <body onload="cargarMapa()">
+  	<h1 class="text-center">Practica 1 ajax</h1>
 		<div class="container well">
 			<form action="" method="POST" role="form">
-			<legend>Ejemplo ajax</legend>
-		
-			<div class="form-group">
-				<label for="">Ciudad</label>
-				<input type="text" class="form-control" id="city" name="city" placeholder="Input field">
-			</div>
-		
-			<button type="button" class="btn btn-primary" onclick = "peticionAjax()">Submit</button>
-		</form>
+				<legend>jax</legend>
+				<div class="form-group">
+					<label for="">Ingresar nombre de la Ciudad</label>
+					<input type="text" class="form-control" id="city" name="city" placeholder="Ingresa la ciudad">
+				</div>
+				<button type="button" onclick="peticionAjax()" class="btn btn-primary">Ver Ciudad</button>
+			</form>
+			<br>
 		</div>
 		
-		<script src="js/jquery.js"></script>
+		<!--Contenedor del mapa-->
+		<div class="container">
+			<legend>Maps</legend>
+			<div id="map-canvas"></div>
+			<br>
+			<br>
+		</div>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
 		<script>
 			function peticionAjax()
 			{
-				var iCiudad = $('#city');
+				debugger
+				var iCiudad = $('#city')
 				var ciudad = iCiudad.val();
 
 				if(!ciudad)
@@ -42,27 +58,66 @@
 				{
 					iCiudad.parent().removeClass('has-error');
 					$.ajax({
-					url: 'https://maps.googleapis.com/maps/api/geocode/json',
-					type: 'GET',
-					dataType: 'json',
-					data: {address: ciudad},
+						url: 'http://maps.googleapis.com/maps/api/geocode/json',
+						type: 'GET',
+						dataType: 'JSON',
+						data: {address: ciudad},
 					})
 					.done(function(data) {
 						console.log(data);
 						if(data.status == 'OK')
 						{
-							$('.container').append('<p>'+ data.results[0].formatted_address +'Latitude:' + data.results[0].geometry.location.lat + 'Longitud:' + data.results[0].geometry.location.lng +'</p>')							
+							$('p').empty();
+							$('.container').append('<br><p>'+data.results[0].formatted_address+'; Latitude: '+data.results[0].geometry.location.lat+'; Longitud; '+data.results[0].geometry.location.lng+'</p>');
+							var myLatlng = new google.maps.LatLng(data.results[0].geometry.location.lat, data.results[0].geometry.location.lng);
+							
+							debugger
+							var mapOptions = 
+				  			{
+				    			zoom: 15,
+				    			panControl: true,
+							  	zoomControl: true,
+							  	mapTypeControl: true,
+							  	scaleControl: true,
+							  	streetViewControl: true,
+							  	overviewMapControl: true,
+				    			center: myLatlng
+				  			};
+
+				  			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+							//Crear el marcador en el mapa
+							var marker = new google.maps.Marker({
+							  position: myLatlng,
+							  map: map,
+							  title: data.results[0].formatted_address
+							});
 						}
 					})
 					.fail(function() {
 						console.log("error");
 					})
 					.always(function() {
-						iCiudad.val('');
+						console.log("complete");
 					});
-				}				
+				}
+			}
+
+			function cargarMapa()
+			{
+				var myLatlng = new google.maps.LatLng(23.6260333, -102.5377501);
+				var mapOptions = 
+	  			{
+	    			zoom: 5,
+	    			panControl: true,
+				  	zoomControl: true,
+				  	mapTypeControl: true,
+				  	scaleControl: true,
+				  	streetViewControl: true,
+				  	overviewMapControl: true,
+	    			center: myLatlng
+	  			};
+	  			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 			}
 		</script>
-
 	</body>
 </html>
