@@ -13,10 +13,13 @@ Lista.prototype.clear = function()
 Lista.prototype.agregar = function(item)
 {
 	this.listaItems[this.numItems++] = item;
+	//cosas
 }
+
 Lista.prototype.toString = function()
 {
 	console.log(this.listaItems);
+	//cosa
 }
 
 Lista.prototype.buscar = function(item)
@@ -38,6 +41,7 @@ Lista.prototype.contiene = function(item)
 Lista.prototype.posActual = function()
 {
 	console.log(this.pos);
+	//cosa
 }
 
 Lista.prototype.siguiente = function()
@@ -72,16 +76,19 @@ Lista.prototype.anterior = function()
 Lista.prototype.getItem = function()
 {
 	console.log(this.listaItems[this.pos]);
+	//cosa
 }
 
 Lista.prototype.inicio = function()
 {
 	this.pos=0;
+	//cosa
 }
 
 Lista.prototype.ultimo = function()
 {
 	thi.pos = this.numItems-1;
+	//cosa
 }
 
 Lista.prototype.moverA = function(index)
